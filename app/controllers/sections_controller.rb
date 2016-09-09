@@ -35,7 +35,7 @@ class SectionsController < ApplicationController
   def destroy
     @section = Section.find(params[:id])
     @section.destroy
-    flash[:notice] = "Session successfully deleted!"    
+    flash[:notice] = "Session successfully deleted!"
     redirect_to course_path(@section.course)
   end
 
