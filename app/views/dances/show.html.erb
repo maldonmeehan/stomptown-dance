@@ -1,11 +1,31 @@
 <h1><%= @dance.name %></h1>
-<h1><%= @dance.county %></h1>
-<h1><%= @dance.style %></h1>
-<h1><%= @dance.note %></h1>
+<h3><%= @dance.county %></h3>
+<h3><%= @dance.style %></h3>
+<h3><%= @dance.note %></h3>
 
-<p><%= link_to "Return to dancess", dances_path %></p>
+<% if @dance.instructions.any? %>
+  <h4>Here are the instructions for this dance:</h4>
+
+  <ul>
+    <% @dance.instructions.each do |instruction| %>
+      <li>
+        <%= instruction.title %> |
+        <%= link_to "Edit Instructions", edit_dance_instruction_path(@dance, instruction) %> |
+        <%= link_to "Delete Instructions", dance_instruction_path(@dance, instruction),
+                                 :data => {:confirm => "Are you sure?",
+                                                :method => "delete"} %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no instructions yet!</p>
+<% end %>
+
+<p><%= link_to "Add a instruction", new_dance_instruction_path(@dance) %></p>
 
 <p><%= link_to "Edit Dance", edit_dance_path(@dance) %></p>
 <p><%= link_to "Delete Dance", dance_path(@dance),
                          :data => {:confirm => "You sure?",
                                    :method => "delete"} %></p>
+
+<p><%= link_to "Return to dances", dances_path %></p>
