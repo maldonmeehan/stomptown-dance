@@ -6,7 +6,6 @@ describe "the add a section process" do
     click_link "New Course"
     fill_in "Name", :with => "Course One"
     click_on "Create Course"
-    click_on "Course One"
     click_on "Add a Section"
     fill_in "Name", :with => "Section One"
     click_on "Create Section"
@@ -18,7 +17,6 @@ describe "the add a section process" do
     click_link "New Course"
     fill_in "Name", :with => "Course One"
     click_on "Create Course"
-    click_on "Course One"
     click_on "Add a Section"
     click_on "Create Section"
     expect(page).to have_content 'errors'

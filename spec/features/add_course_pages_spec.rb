@@ -6,7 +6,7 @@ describe "the add a course process" do
     click_link 'New Course'
     fill_in 'Name', :with => 'Course One'
     click_on 'Create Course'
-    expect(page).to have_content 'Courses'
+    expect(page).to have_content 'Course successfully added!'
   end
 
   it "gives error when no name is entered" do
