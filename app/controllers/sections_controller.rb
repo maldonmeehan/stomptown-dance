@@ -30,6 +30,12 @@ class SectionsController < ApplicationController
     end
   end
 
+  def destroy
+    @section = Section.find(params[:id])
+    @section.destroy
+    redirect_to course_path(@section.course)
+  end
+
   private
     def section_params
       params.require(:section).permit(:name)
