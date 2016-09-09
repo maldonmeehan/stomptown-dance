@@ -23,9 +23,23 @@ class DancesController < ApplicationController
     end
   end
 
-private
-  def dance_params
-    params.require(:dance).permit(:name)
+  def edit
+    @dance = Dance.find(params[:id])
+    render :edit
   end
+
+  def update
+    @dance= Dance.find(params[:id])
+    if @dance.update(dance_params)
+      redirect_to dances_path
+    else
+      render :edit
+    end
+  end
+
+  private
+    def dance_params
+      params.require(:dance).permit(:name)
+    end
 
 end

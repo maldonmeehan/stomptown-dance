@@ -1,0 +1,22 @@
+<h1>Edit Dance</h1>
+
+<% if @dance.errors.any? %>
+  <h3>Oops there were some errors. Please try again:</h3>
+  <ul>
+    <% @dance.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @dance do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :county %>
+  <%= f.text_field :county %>
+  <%= f.label :style %>
+  <%= f.text_field :style %>
+  <%= f.label :note %>
+  <%= f.text_field :note %>
+  <%= f.submit  %>
+<% end %>
