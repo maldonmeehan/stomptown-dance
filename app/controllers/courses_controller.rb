@@ -1,22 +1,18 @@
 class CoursesController < ApplicationController
   def index
     @courses = Course.all
-    render :index
   end
 
   def show
     @course = Course.find(params[:id])
-    render :show
   end
 
   def new
     @course = Course.new
-    render :new
   end
 
   def edit
     @course = Course.find(params[:id])
-    render :edit
   end
 
   def create
