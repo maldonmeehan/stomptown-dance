@@ -38,13 +38,13 @@ class DancesController < ApplicationController
   def destroy
     @dance = Dance.find(params[:id])
     @dance.destroy
-    flash[:notice] = "Dance successfully deleted!"    
+    flash[:notice] = "Dance successfully deleted!"
     redirect_to dances_path
   end
 
   private
     def dance_params
-      params.require(:dance).permit(:name)
+      params.require(:dance).permit(:name, :county, :style, :note)
     end
 
 end

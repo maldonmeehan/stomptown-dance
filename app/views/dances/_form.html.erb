@@ -3,11 +3,15 @@
 <%= form_for @dance do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
+  <br>
   <%= f.label :county %>
   <%= f.text_field :county %>
+  <br>
   <%= f.label :style %>
   <%= f.text_field :style %>
+  <br>
   <%= f.label :note %>
   <%= f.text_field :note %>
+  <br>
   <%= f.submit  %>
 <% end %>
