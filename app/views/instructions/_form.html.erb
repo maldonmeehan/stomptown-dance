@@ -1,24 +1,31 @@
 <%= render('layouts/errors', :object => @instruction) %>
 
 <%= form_for [@dance, @instruction] do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
   <%= f.label :figure %>
   <%= f.text_field :figure %>
+  <br>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
   <%= f.label :tune %>
   <%= f.text_field :tune %>
+  <br>
   <%= f.label :bar_total %>
   <%= f.text_field :bar_total %>
-  <%= f.label :bars %>
-  <%= f.text_field :bars %>
-  <%= f.label :move %>
-  <%= f.text_field :move %>
+  <br>
   <%= f.label :number %>
   <%= f.text_field :number %>
-  <%= f.label :instruction %>
-  <%= f.text_field :instruction %>
+  <br>
+  <%= f.label :move %>
+  <%= f.text_field :move %>
+  <br>
   <%= f.label :call %>
   <%= f.text_field :call %>
-
+  <br>
+  <%= f.label :instruction %>
+  <%= f.text_field :instruction %>
+  <br>
+  <%= f.label :bars %>
+  <%= f.text_field :bars %>
   <p><%= f.submit %></p>
 <% end %>
