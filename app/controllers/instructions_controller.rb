@@ -8,6 +8,7 @@ class InstructionsController < ApplicationController
     @dance = Dance.find(params[:dance_id])
     @instruction = @dance.instructions.new(instruction_params)
     if @instruction.save
+      flash[:notice] = "Instructions successfully added!"      
       redirect_to dance_path(@instruction.dance)
     else
       render :new
