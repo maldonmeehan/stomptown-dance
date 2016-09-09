@@ -1,0 +1,11 @@
+<%= render('layouts/errors', :object => @section) %>
+
+<%= form_for [@course, @section] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :level %>
+  <%= f.text_field :level %>
+  <%= f.label :number %>
+  <%= f.text_field :number %>
+  <p><%= f.submit %></p>
+<% end %>

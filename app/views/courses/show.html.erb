@@ -1,8 +1,28 @@
 <h1><%= @course.name %></h1>
 
+<% if @course.sections.any? %>
+  <h4>Here are the sections for this course:</h4>
+
+  <ul>
+    <% @course.sections.each do |section| %>
+      <li>
+        <%= section.name %> |
+        <%= link_to "Edit", edit_course_section_path(@course, section) %> |
+        <%= link_to "Delete", course_section_path(@course, section),
+                                 :data => {:confirm => "Are you sure?",
+                                                :method => "delete"} %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no sections yet!</p>
+<% end %>
+
+<p><%= link_to "Add a Section", new_course_section_path(@course) %></p>
+<p><%= link_to "Delete Course", course_path(@course),
+                        :data => {:confirm => "Are you sure?",
+                                       :method => "delete"} %></p>
+
 <p><%= link_to "Return to courses", courses_path %></p>
 
 <p><%= link_to "Edit", edit_course_path(@course) %></p>
-<p><%= link_to "Delete", course_path(@course),
-                         :data => {:confirm => "You sure?",
-                                   :method => "delete"} %></p>
