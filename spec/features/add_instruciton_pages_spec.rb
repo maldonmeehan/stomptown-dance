@@ -13,7 +13,7 @@ describe "the add instructions process" do
     expect(page).to have_content 'Instructions successfully added!'
   end
 
-  it "gives error when no name is entered" do
+  it "gives error when no number is entered" do
     visit dances_path
     click_link "New Dance"
     fill_in "Name", :with => "Dance One"
