@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Course do
+describe Section do
   it { should validate_presence_of :name }
-  it { should have_many :sections }
+  it { should belong_to :course }
 end
