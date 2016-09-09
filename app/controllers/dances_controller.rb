@@ -14,7 +14,8 @@ class DancesController < ApplicationController
   def create
     @dance = Dance.new(dance_params)
     if @dance.save
-      redirect_to  dances_path
+      flash[:notice] = "Dance successfully added!"
+      redirect_to  dances_path(@dance)
     else
       render :new
     end
@@ -27,6 +28,7 @@ class DancesController < ApplicationController
   def update
     @dance= Dance.find(params[:id])
     if @dance.update(dance_params)
+      flash[:notice] = "Dance successfully eddited!"
       redirect_to dances_path
     else
       render :edit
@@ -36,6 +38,7 @@ class DancesController < ApplicationController
   def destroy
     @dance = Dance.find(params[:id])
     @dance.destroy
+    flash[:notice] = "Dance successfully deleted!"    
     redirect_to dances_path
   end
 
