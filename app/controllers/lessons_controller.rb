@@ -1,8 +1,10 @@
 class ListsController < ApplicationController
+
   def new
     @section = Section.find(params[:section_id])
     @lesson = @section.lessons.new
   end
+
   def create
     @section = Section.find(params[:section_id])
     @lesson = @section.lessons.new(lesson_params)
@@ -13,7 +15,7 @@ class ListsController < ApplicationController
     end
   end
 
-private
+  private
   def lesson_params
     params.require(:lession).permit(:name)
   end

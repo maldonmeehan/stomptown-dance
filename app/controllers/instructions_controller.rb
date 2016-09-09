@@ -1,4 +1,5 @@
 class InstructionsController < ApplicationController
+
   def new
     @dance = Dance.find(params[:dance_id])
     @instruction = @dance.instructions.new
@@ -8,7 +9,7 @@ class InstructionsController < ApplicationController
     @dance = Dance.find(params[:dance_id])
     @instruction = @dance.instructions.new(instruction_params)
     if @instruction.save
-      flash[:notice] = "Instructions successfully added!"      
+      flash[:notice] = "Instructions successfully added!"
       redirect_to dance_path(@instruction.dance)
     else
       render :new
@@ -38,9 +39,8 @@ class InstructionsController < ApplicationController
     redirect_to dance_path(@instruction.dance)
   end
 
-private
+  private
   def instruction_params
     params.require(:instruction).permit(:number, :move, :call, :instruction, :bars)
   end
-
 end

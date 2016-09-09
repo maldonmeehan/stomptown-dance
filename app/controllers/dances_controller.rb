@@ -43,8 +43,7 @@ class DancesController < ApplicationController
   end
 
   private
-    def dance_params
-      params.require(:dance).permit(:name, :county, :style, :note)
-    end
-
+  def dance_params
+    params.require(:dance).permit(:name, :county, :style, :note)
+  end
 end
