@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     resources :lessons
   end
 
-  resources :dances
+  resources :dances do
+    resources :instructions    
+  end
 
 end
