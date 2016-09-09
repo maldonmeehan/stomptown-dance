@@ -1,3 +1,8 @@
 <h1><%= @course.name %></h1>
 
 <p><%= link_to "Return to courses", courses_path %></p>
+
+<p><%= link_to "Edit", edit_course_path(@course) %></p>
+<p><%= link_to "Delete", course_path(@course),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
