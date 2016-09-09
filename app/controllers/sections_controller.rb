@@ -9,6 +9,7 @@ class SectionsController < ApplicationController
     @course = Course.find(params[:course_id])
     @section = @course.sections.new(section_params)
     if @section.save
+      flash[:notice] = "Session successfully added!"
       redirect_to course_path(@section.course)
     else
       render :new
@@ -24,6 +25,7 @@ class SectionsController < ApplicationController
     @course = Course.find(params[:course_id])
     @section= Section.find(params[:id])
     if @section.update(section_params)
+      flash[:notice] = "Session successfully eddited!"
       redirect_to course_path(@section.course)
     else
       render :edit
@@ -33,6 +35,7 @@ class SectionsController < ApplicationController
   def destroy
     @section = Section.find(params[:id])
     @section.destroy
+    flash[:notice] = "Session successfully deleted!"    
     redirect_to course_path(@section.course)
   end
 
