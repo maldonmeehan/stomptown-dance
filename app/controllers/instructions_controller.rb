@@ -16,7 +16,7 @@ class InstructionsController < ApplicationController
 
 private
   def instruction_params
-    params.require(:instruction).permit(:title)
+    params.require(:instruction).permit(:number, :move, :call, :instruction, :bars)
   end
 
 end

@@ -9,7 +9,12 @@
   <ul>
     <% @dance.instructions.each do |instruction| %>
       <li>
-        <%= instruction.title %> |
+        <%= instruction.number %> |
+        <%= instruction.move %> |
+        <%= instruction.call %> |
+        <%= instruction.instruction %> |
+        <%= instruction.bars %> |
+
         <%= link_to "Edit Instructions", edit_dance_instruction_path(@dance, instruction) %> |
         <%= link_to "Delete Instructions", dance_instruction_path(@dance, instruction),
                                  :data => {:confirm => "Are you sure?",
