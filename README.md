@@ -28,7 +28,7 @@ $ postgres
 
 Open a new window and run:
 ```
-$ rake db:create && rake db:schema:load && rake db:seed
+$ rake db:create && rake db:migrate && rake db:test:prepare
 ```
 ```
 $ rails s
