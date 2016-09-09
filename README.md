@@ -1,30 +1,6 @@
-# README
+#Stomptown Dance Lessons
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-## Ruby on Rails - Independent Student Project - Stomptown Dance Lessons
+## Ruby on Rails - Independent Student Project
 
 An an app allows a user to take dance lessons online, September 8, 2016
 
@@ -36,34 +12,29 @@ An Epicodus independent student project using Ruby on Rails.
 
 ## Setup/Installation Requirements
 
-Install *Shoe Distribution* by cloning the repository.  
 ```
-$ git clone https://github.com/maldonmeehan/shoe-distribution.git
+$ git clone https://github.com/maldonmeehan/stomptown-dance.git
 ```
 
 Install required gems:
 ```
-$ bundle install
+$ bundle
 ```
 
-Run Postgress:
+Run Postgres:
 ```
 $ postgres
 ```
 
 Open a new window and run:
 ```
-$ rake db:create
-$ rake db:migrate
-$ rake db:test:prepare
+$ rake db:create && rake db:schema:load && rake db:seed
+```
+```
+$ rails s
 ```
 
-Start the Sinatra webserver:
-```
-$ ruby app.rb
-```
-
-Navigate to `localhost:4567` in your browser of choice.
+Navigate to `http://localhost:3000` in your browser of choice.
 
 ## Known Bugs
 
@@ -75,9 +46,8 @@ If you have any questions please feel free to contact Maldon on github
 
 ## Technologies Used
 
-* Ruby
+* Ruby on Rails
 * Postgres
-* Sinatra
 
 ### License
 
