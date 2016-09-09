@@ -37,6 +37,12 @@ class DancesController < ApplicationController
     end
   end
 
+  def destroy
+    @dance = Dance.find(params[:id])
+    @dance.destroy
+    redirect_to dances_path
+  end
+
   private
     def dance_params
       params.require(:dance).permit(:name)

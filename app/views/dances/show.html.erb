@@ -1,3 +1,8 @@
 <h1><%= @dance.name %></h1>
 
 <p><%= link_to "Return to dancess", dances_path %></p>
+
+<p><%= link_to "Edit Dance", edit_dance_path(@dance) %></p>
+<p><%= link_to "Delete Dance", dance_path(@dance),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
