@@ -2,13 +2,13 @@
 
 ## Ruby on Rails - Independent Student Project
 
-An an app allows a user to take dance lessons online, September 8, 2016
+An app that allows a user to take dance lessons online.
 
 By Maldon Meehan
 
 ## Description
 
-An Epicodus independent student project using Ruby on Rails.
+An Epicodus independent student project using Ruby on Rails. 
 
 ## Setup/Installation Requirements
 

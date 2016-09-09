@@ -41,6 +41,7 @@ number
 instruction
 bars
 call
+dance_id
 (belongs_to dances)
 
 ####musics
