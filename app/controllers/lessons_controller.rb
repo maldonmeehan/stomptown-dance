@@ -1,4 +1,4 @@
-class ListsController < ApplicationController
+class LessonsController < ApplicationController
 
   def new
     @section = Section.find(params[:section_id])
@@ -17,6 +17,6 @@ class ListsController < ApplicationController
 
   private
   def lesson_params
-    params.require(:lession).permit(:name)
+    params.require(:lesson).permit(:name)
   end
 end

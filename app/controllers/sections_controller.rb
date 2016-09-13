@@ -5,6 +5,10 @@ class SectionsController < ApplicationController
     @section = @course.sections.new
   end
 
+  def show
+    @section = Section.find(params[:id])
+  end
+
   def create
     @course = Course.find(params[:course_id])
     @section = @course.sections.new(section_params)

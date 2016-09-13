@@ -8,7 +8,7 @@ By Maldon Meehan
 
 ## Description
 
-An Epicodus independent student project using Ruby on Rails. 
+An Epicodus independent student project using Ruby on Rails.
 
 ## Setup/Installation Requirements
 
