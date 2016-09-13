@@ -11,5 +11,10 @@ Rails.application.routes.draw do
 
   resources :dances do
     resources :instructions
+
+    resources :dances do
+      resources :figures
+    end
+
   end
 end
