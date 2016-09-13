@@ -29,7 +29,7 @@ class SectionsController < ApplicationController
     @course = Course.find(params[:course_id])
     @section= Section.find(params[:id])
     if @section.update(section_params)
-      flash[:notice] = "Session successfully eddited!"
+      flash[:notice] = "Session successfully edited!"
       redirect_to course_path(@section.course)
     else
       render :edit
