@@ -1,15 +1,14 @@
-<!-- (to be editing and changed for figures and instructions) -->
-<h1><%= @dance.name %></h1>
+<h1><%= @figure.number %></h1>
 
-<h4><%= @dance.county %></h4>
-<h4><%= @dance.style %></h4>
-<h4><%= @dance.note %></h4>
+<h4><%= @figure.title %></h4>
+<h4><%= @figure.tune %></h4>
+<h4><%= @figure.bar_total %></h4>
 
-<% if @dance.instructions.any? %>
-  <h4>Here are the instructions for this dance:</h4>
+<% if @figure.instructions.any? %>
+  <h4>Here are the instructions for this figure:</h4>
 
   <ul>
-    <% @dance.instructions.each do |instruction| %>
+    <% @figure.instructions.each do |instruction| %>
       <li>
         <%= instruction.number %> |
         <%= instruction.move %> |
@@ -17,20 +16,20 @@
         <%= instruction.instruction %> |
         <%= instruction.bars %> |
 
-        <%= link_to "Edit Instructions", edit_dance_instruction_path(@dance, instruction) %> |
-        <%= link_to "Delete Instructions", dance_instruction_path(@dance, instruction),
+        <%= link_to "Edit Instructions", edit_figure_instruction_path(@figure, instruction) %> |
+        <%= link_to "Delete Instructions", figure_instruction_path(@figure, instruction),
                                  :data => {:confirm => "Are you sure?",
                                                 :method => "delete"} %>
       </li>
     <% end %>
   </ul>
 <% else %>
-  <p>There are no instructions yet!</p>
+  <p>There are no figures yet!</p>
 <% end %>
 
-<p><%= link_to "Add Instructions", new_dance_instruction_path(@dance) %></p>
-<p><%= link_to "Edit Dance", edit_dance_path(@dance) %></p>
-<p><%= link_to "Delete Dance", dance_path(@dance),
+<p><%= link_to "Add Instructions", new_figure_instruction_path(@figure) %></p>
+<p><%= link_to "Edit Figure", edit_dance_path(@figure) %></p>
+<p><%= link_to "Delete Figure", figure_path(@figure),
                          :data => {:confirm => "You sure?",
                                    :method => "delete"} %></p>
-<p><%= link_to "Return to dances", dances_path %></p>
+<p><%= link_to "Return to figures", figures_path %></p>
