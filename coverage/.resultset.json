@@ -612,6 +612,13 @@
         1,
         null
       ],
+      "/Users/Guest/Desktop/stomptown-dance/spec/factories.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/Guest/Desktop/stomptown-dance/config/routes.rb": [
         1,
         1,
@@ -905,6 +912,6 @@
         null
       ]
     },
-    "timestamp": 1473904357
+    "timestamp": 1473904813
   }
 }
