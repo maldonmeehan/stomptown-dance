@@ -15,12 +15,28 @@
         <%= figure.tune %> |
         <%= figure.bar_total %> Bars |
 
-        <%= link_to "Add Instructions", new_figure_instruction_path(figure) %> |       
+        <%= link_to "Add Instructions", new_figure_instruction_path(figure) %> |
         <%= link_to "Edit Figure", edit_dance_figure_path(@dance, figure) %> |
         <%= link_to "Delete Figure", dance_figure_path(@dance, figure),
                                  :data => {:confirm => "Are you sure?",
                                                 :method => "delete"} %>
       </li>
+      <ul>
+        <% figure.instructions.each do |instruction| %>
+          <li>
+            <%= instruction.number %> |
+            <%= instruction.move %> |
+            <%= instruction.call %> |
+            <%= instruction.instruction %> |
+            <%= instruction.bars %> |
+
+            <%= link_to "Edit Instructions", edit_figure_instruction_path(@figure, instruction) %> |
+            <%= link_to "Delete Instructions", figure_instruction_path(@figure, instruction),
+                                     :data => {:confirm => "Are you sure?",
+                                                    :method => "delete"} %>
+          </li>
+        <% end %>
+
     <% end %>
   </ul>
 <% else %>

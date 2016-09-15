@@ -4,12 +4,16 @@ class FiguresController < ApplicationController
     @figure = @dance.figures.new
   end
 
+  def show
+    @figure = Figure.find(params[:id])
+  end
+
   def create
     @dance = Dance.find(params[:dance_id])
     @figure = @dance.figures.new(figure_params)
     if @figure.save
       flash[:notice] = "Figure had successfully added!"
-      redirect_to dance_path(@figure.dance)
+      redirect_to dance_path(@dance)
     else
       render :new
     end
