@@ -10,6 +10,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -19,7 +20,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'capybara'
   gem 'factory_girl_rails'
-  gem 'simplecov', require: false  
+  gem 'simplecov', require: false
 end
 
 group :development do
