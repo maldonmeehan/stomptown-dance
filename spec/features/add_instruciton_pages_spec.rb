@@ -2,6 +2,8 @@ require 'rails_helper'
 
 describe "the add instructions process" do
   it "adds new instructions" do
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user, :run_callbacks => false)
     visit dances_path
     click_link "New Dance"
     fill_in "Name", :with => "Dance One"
@@ -14,6 +16,8 @@ describe "the add instructions process" do
   end
 
   it "gives error when no number is entered" do
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user, :run_callbacks => false)
     visit dances_path
     click_link "New Dance"
     fill_in "Name", :with => "Dance One"

@@ -2,6 +2,8 @@ require 'rails_helper'
 
 describe "the edit a dance process" do
   it "edits a dance" do
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user, :run_callbacks => false)
     dance = Dance.create(:name => 'Dance One')
     visit dance_path(dance)
     click_on 'Edit Dance'

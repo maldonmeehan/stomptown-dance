@@ -2,6 +2,8 @@ require 'rails_helper'
 
 describe "the edit a course process" do
   it "edits a course" do
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user, :run_callbacks => false)
     course = Course.create(:name => 'Course One')
     visit course_path(course)
     click_on 'Edit Course'

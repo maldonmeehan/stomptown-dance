@@ -2,6 +2,8 @@ require 'rails_helper'
 
 describe "the edit instructions process" do
   it "edits instructions" do
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user, :run_callbacks => false)
     dance = Dance.create(:name => 'Dance One')
     instruction = Instruction.create(:number => '1', :dance_id => dance.id)
     visit dance_path(dance)

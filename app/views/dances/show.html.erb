@@ -29,11 +29,6 @@
             <%= instruction.call %> |
             <%= instruction.instruction %> |
             <%= instruction.bars %> |
-
-            <%= link_to "Edit Instructions", edit_figure_instruction_path(@figure, instruction) %> |
-            <%= link_to "Delete Instructions", figure_instruction_path(@figure, instruction),
-                                     :data => {:confirm => "Are you sure?",
-                                                    :method => "delete"} %>
           </li>
         <% end %>
 
