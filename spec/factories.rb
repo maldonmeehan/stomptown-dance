@@ -11,7 +11,7 @@ FactoryGirl.define do
   factory(:section) do
     name('Dances of Connemara')
     leve('Beginner')
-    number('1')
+    number(1)
   end
 
   factory(:lesson) do
