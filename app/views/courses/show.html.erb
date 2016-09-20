@@ -9,6 +9,7 @@
     <% @course.sections.each do |section| %>
       <li>
         <%= section.name %> |
+        <%= link_to "add a lesson", new_section_lesson_path(@course) %> |
         <%= link_to "Edit", edit_course_section_path(@course, section) %> |
         <%= link_to "Delete", course_section_path(@course, section),
                                  :data => {:confirm => "Are you sure?",
