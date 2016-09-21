@@ -1,27 +1,38 @@
-<h1><%= @dance.name %></h1>
+<div class="dance-details">
+  <h1><%= @dance.name %></h1>
+  <h4>County: <%= @dance.county %></h4>
+  <h4>Style: <%= @dance.style %></h4>
+  <h4>Notes: <%= @dance.note %></h4>
+</div>
 
-<h4><%= @dance.county %></h4>
-<h4><%= @dance.style %></h4>
-<h4><%= @dance.note %></h4>
-
-<% if @dance.figures.any? %>
-  <h4>Here are the figures for this dance:</h4>
-
-  <ul>
-    <% @dance.figures.each do |figure| %>
-      <li>
-        Figure <%= figure.number %> |
-        <%= figure.title %> |
-        <%= figure.tune %> |
-        <%= figure.bar_total %> Bars |
-
-        <%= link_to "Add Instructions", new_figure_instruction_path(figure) %> |
-        <%= link_to "Edit Figure", edit_dance_figure_path(@dance, figure) %> |
+<div class="figure-details">
+  <% if @dance.figures.any? %>
+  <table style="width:100%">
+    <tr>
+      <% @dance.figures.each do |figure| %>
+        <th> Figure <%= figure.number %> </th>
+        <th><%= figure.title %></th>
+        <th><%= figure.tune %></th>
+        <th><%= figure.bar_total %> Bars</th>
+        <th><%= link_to "Add Instructions", new_figure_instruction_path(figure) %></th>
+        <th><%= link_to "Edit Figure", edit_dance_figure_path(@dance, figure) %></th>
+        <th>
         <%= link_to "Delete Figure", dance_figure_path(@dance, figure),
-                                 :data => {:confirm => "Are you sure?",
-                                                :method => "delete"} %>
-      </li>
-      <ul>
+                                         :data => {:confirm => "Are you sure?",
+                                                        :method => "delete"} %>
+
+        </th>
+        <tr>
+  </table>
+</div>
+
+<div class="instruction-details">
+
+</div>
+
+
+
+
         <% figure.instructions.each do |instruction| %>
           <li>
             <%= instruction.number %> |
