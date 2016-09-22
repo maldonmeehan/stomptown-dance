@@ -6,7 +6,7 @@ class SectionsController < ApplicationController
     respond_to do |format|
       format.html { render :new }
       format.js
-    end    
+    end
   end
 
   def show
@@ -27,6 +27,10 @@ class SectionsController < ApplicationController
   def edit
     @course = Course.find(params[:course_id])
     @section = Section.find(params[:id])
+    respond_to do |format|
+      format.html { render :edit }
+      format.js
+    end
   end
 
   def update
