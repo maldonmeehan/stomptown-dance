@@ -21,7 +21,7 @@
   <p>There are no sections yet!</p>
 <% end %>
 
-<p><%= link_to "Add a Section", new_course_section_path(@course) %></p>
+<p><%= link_to "Add a Section", new_course_section_path(@course), id: "new_section_js", remote: true %></p>
 <p><%= link_to "Delete Course", course_path(@course),
                         :data => {:confirm => "Are you sure?",
                                        :method => "delete"} %></p>

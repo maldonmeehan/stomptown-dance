@@ -3,6 +3,10 @@ class SectionsController < ApplicationController
   def new
     @course = Course.find(params[:course_id])
     @section = @course.sections.new
+    respond_to do |format|
+      format.html { render :new }
+      format.js
+    end    
   end
 
   def show
