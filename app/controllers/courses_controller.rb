@@ -11,6 +11,10 @@ class CoursesController < ApplicationController
 
   def new
     @course = Course.new
+    respond_to do |format|
+      format.html { render :new }
+      format.js
+    end
   end
 
   def edit
