@@ -19,6 +19,10 @@ class CoursesController < ApplicationController
 
   def edit
     @course = Course.find(params[:id])
+    respond_to do |format|
+      format.html { render :new }
+      format.js
+    end
   end
 
   def create
