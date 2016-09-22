@@ -2,7 +2,7 @@
 
 ## Ruby on Rails - Independent Student Project
 
-An app that allows a user to take dance lessons online.
+An app that allows a user to take dance lessons online. Including an dance database for teachers and callers. 
 
 By Maldon Meehan
 
