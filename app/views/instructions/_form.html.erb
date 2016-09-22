@@ -2,18 +2,18 @@
 
 <%= form_for [@figure, @instruction] do |f| %>
   <%= f.label :number %>
-  <%= f.text_field :number %>
+  <%= f.text_field :number, class: "form-control" %>
   <br>
   <%= f.label :move %>
-  <%= f.text_field :move %>
+  <%= f.text_field :move, class: "form-control" %>
   <br>
   <%= f.label :call %>
-  <%= f.text_field :call %>
+  <%= f.text_field :call, class: "form-control" %>
   <br>
   <%= f.label :instruction %>
-  <%= f.text_field :instruction %>
+  <%= f.text_field :instruction, class: "form-control" %>
   <br>
   <%= f.label :bars %>
-  <%= f.text_field :bars %>
-  <p><%= f.submit %></p>
+  <%= f.text_field :bars, class: "form-control" %>
+  <%= f.submit class: "btn btn-primary" %>
 <% end %>

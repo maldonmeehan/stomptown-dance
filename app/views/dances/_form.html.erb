@@ -2,16 +2,16 @@
 
 <%= form_for @dance do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, class: "form-control" %>
   <br>
   <%= f.label :county %>
-  <%= f.text_field :county %>
+  <%= f.text_field :county, class: "form-control" %>
   <br>
   <%= f.label :style %>
-  <%= f.text_field :style %>
+  <%= f.text_field :style, class: "form-control" %>
   <br>
   <%= f.label :note %>
-  <%= f.text_field :note %>
+  <%= f.text_field :note, class: "form-control" %>
   <br>
-  <%= f.submit  %>
+  <%= f.submit class: "btn btn-primary" %>
 <% end %>

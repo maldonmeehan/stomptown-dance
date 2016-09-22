@@ -2,16 +2,16 @@
 
 <%= form_for [@dance, @figure] do |f| %>
   <%= f.label :number %>
-  <%= f.text_field :number %>
+  <%= f.text_field :number, class: "form-control" %>
   <br>
   <%= f.label :tune %>
-  <%= f.text_field :tune %>
+  <%= f.text_field :tune, class: "form-control" %>
   <br>
   <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, class: "form-control" %>
   <br>
   <%= f.label :bar_total %>
-  <%= f.text_field :bar_total %>
+  <%= f.text_field :bar_total, class: "form-control" %>
   <br>
-  <p><%= f.submit %></p>
+  <%= f.submit class: "btn btn-primary" %>
 <% end %>
