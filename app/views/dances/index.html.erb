@@ -1,6 +1,7 @@
 <% provide(:title, "Dances | Stomptown Dance Lessons") %>
 
-<h1>Dances</h1>
+<h1>List of Dances</h1>
+
 
 <ul>
   <% @dances.each do |dance| %>
@@ -8,4 +9,5 @@
   <% end %>
 </ul>
 
-<%= link_to "New Dance", new_dance_path, id: "new_dance_js", remote: true  %>
+<hr>
+<%= link_to "New Dance", new_dance_path, class: "btn btn-primary", id: "new_dance_js", remote: true  %>

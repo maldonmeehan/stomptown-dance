@@ -1,6 +1,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.dance-details {
-  text-align: center;
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 1.3em;
+}
+
+.bars {
+  text-align: right;
+}
+
+.tune {
+  text-align: right;
 }
