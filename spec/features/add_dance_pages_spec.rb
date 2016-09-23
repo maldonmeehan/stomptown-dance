@@ -8,7 +8,7 @@ describe "the add a dance process" do
     click_link 'New Dance'
     fill_in 'Name', :with => 'Dance One'
     click_on 'Create Dance'
-    expect(page).to have_content 'Dance successfully added!'
+    expect(page).to have_content 'Dance One'
   end
 
   it "gives error when no name is entered" do

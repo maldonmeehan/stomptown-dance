@@ -7,7 +7,7 @@ describe "the edit a section process" do
     course = Course.create(:name => 'Course One')
     section = Section.create(:name => 'Section One', :course_id => course.id)
     visit course_path(course)
-    click_on 'Edit'
+    click_on 'Edit Section'
     fill_in 'Name', :with => 'Section Two'
     click_on 'Update Section'
     expect(page).to have_content 'Section Two'

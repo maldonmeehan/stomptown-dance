@@ -14,6 +14,7 @@ class DancesController < ApplicationController
   def create
     @dance = Dance.new(dance_params)
     if @dance.save
+      flash[:notice] = "Dance successfully added!"
       respond_to do |format|
         format.html { redirect_to dances_path }
         format.js
