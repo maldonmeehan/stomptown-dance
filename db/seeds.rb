@@ -79,7 +79,8 @@ figure_list.each do |figure, title, tune, bar_total, number, dance_id|
 end
 
 instruction_list = [
-  [1, "All", "Lead Around/Lead Back", "All couples in crossed hand hold lead around anti-clockwise (6 bars).   Dancers turn clockwise, the ladies under both raised arms (2 bars), and couples lead back to place (6 bars), face each other and 'step it out' (2 bars).", 16, 1],
+  # connemara figure one
+  [1, "All", "Lead Around/Lead Back", "All couples in crossed hand hold lead around anti-clockwise (6 bars). Dancers turn clockwise, the ladies under both raised arms (2 bars), and couples lead back to place (6 bars), face each other and 'step it out' (2 bars).", 16, 1],
   [2, "All", "Swing", "All couples in ceili hold (6 bars), face center and 'step it out' (2 bars).", 8, 1],
   [3, "Tops", "Advance & Retire", "in crossed hand advance & retire twice", 8, 1],
   [4, "Tops", "House Around", "in crossed hand house around anit-clockwise (6 bars) and 'step it out'.", 8, 1],
@@ -96,7 +97,37 @@ instruction_list = [
   [16, "Sides", "Advance & Retire", "in crossed hand advance & retire twice", 8, 1],
   [17, "Sides", "House Around", "in crossed hand house around anit-clockwise (6 bars) and 'step it out'.", 8, 1],
   [18, "Sides", "Swing", "in ceili hold (6 bars), face center and 'step it out' (2 bars).", 8, 1],
-  [19, "All", "Swing", "in ceili hold (6 bars), face center and 'step it out' (2 bars).", 8, 1]
+  [19, "All", "Swing", "in ceili hold (6 bars), face center and 'step it out' (2 bars).", 8, 1],
+  # connemara figure Two
+  [1, "All", "Lead Around/Lead Back", "All couples in crossed hand hold lead around anti-clockwise (6 bars). Dancers turn clockwise, the ladies under both raised arms (2 bars), and couples lead back to place (6 bars), face each other and 'step it out' (2 bars).", 16,2],
+  [2, "All", "Swing", "All couples in ceili hold (6 bars), face center and 'step it out' (2 bars).", 8,2],
+
+  [3, "Tops", "Back to Back", "1st top gent and 2nd top lady dance past each other R to R (2 bars), pass each other back to back (2 bars), fall back to face each other (2 bars) and step it out (2 bars).", 8,2],
+  [4, "Tops", "Swing", "The dancing couple swing, falling back to their own positions on the last 2 bars.", 8,2],
+  [5, "Tops", "Advance & Retire", "in crossed hand hold advance & retire twice", 8, 2],
+  [6, "Tops", "House Around", "in crossed hand hold house around anit-clockwise (6 bars) and 'step it out'.", 8, 2],
+  [7, "Tops", "Swing", "in ceili hold (6 bars), face center and 'step it out' (2 bars).", 8,2],
+
+  [8, "Sides", "Back to Back", "1st side gent and 2nd side lady dance past each other R to R (2 bars), pass each other back to back (2 bars), fall back to face each other (2 bars) and step it out (2 bars).", 8,2],
+  [8, "Sides", "Swing", "The dancing couple swing, falling back to their own positions on the last 2 bars.", 8,2],
+  [9, "Sides", "House Around", "in crossed hand hold house around anit-clockwise (6 bars) and 'step it out'.", 8, 2],
+  [10, "Sides", "Swing", "in ceili hold (6 bars), face center and 'step it out' (2 bars).", 8,2],
+
+  [11, "Tops", "Back to Back", "2nd top gent and 1st top lady dance past each other R to R (2 bars), pass each other back to back (2 bars), fall back to face each other (2 bars) and step it out (2 bars).", 8,2],
+  [12, "Tops", "Swing", "The dancing couple swing, falling back to their own positions on the last 2 bars.", 8,2],
+  [13, "Tops", "Advance & Retire", "in crossed hand hold advance & retire twice", 8, 2],
+  [14, "Tops", "House Around", "in crossed hand hold house around anit-clockwise (6 bars) and 'step it out'.", 8, 2],
+  [15, "Tops", "Swing", "in ceili hold (6 bars), face center and 'step it out' (2 bars).", 8,2],
+
+  [16, "Sides", "Back to Back", "2nd side gent and 1st side lady dance past each other R to R (2 bars), pass each other back to back (2 bars), fall back to face each other (2 bars) and step it out (2 bars).", 8,2],
+  [17, "Sides", "Swing", "The dancing couple swing, falling back to their own positions on the last 2 bars.", 8,2],
+  [18, "Sides", "House Around", "in crossed hand hold house around anit-clockwise (6 bars) and 'step it out'.", 8, 2],
+  [19, "All", "Swing", "in ceili hold (6 bars), face center and 'step it out' (2 bars).", 8,2],
+
+  # connemara figure Three
+
+  # connemara figure Four
+
 ]
 
 
