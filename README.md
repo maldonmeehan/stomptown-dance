@@ -28,8 +28,15 @@ $ postgres
 
 Open a new window and run:
 ```
-$ rake db:create && rake db:migrate && rake db:test:prepare
+$ rake db:create
 ```
+```
+$ rake db:seed
+```
+```
+rake db:migrate && rake db:test:prepare
+```
+
 ```
 $ rails s
 ```
