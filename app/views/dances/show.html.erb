@@ -29,12 +29,6 @@
 </div>
 
 <div class="instruction-details">
-
-</div>
-
-
-
-
         <% figure.instructions.each do |instruction| %>
           <li>
             <%= instruction.number %> |
@@ -50,6 +44,7 @@
 <% else %>
   <p>There are no figures yet!</p>
 <% end %>
+</div>
 
 <p><%= link_to "Add Figures", new_dance_figure_path(@dance) %></p>
 <p><%= link_to "Edit Dance", edit_dance_path(@dance), id: "edit_dance_js", remote: true %></p>
