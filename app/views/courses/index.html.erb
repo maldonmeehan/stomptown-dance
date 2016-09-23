@@ -2,11 +2,17 @@
 
 <h1>Courses</h1>
 
-<ul>
+
+<div class="row">
   <% @courses.each do |course| %>
-    <li><%= link_to course.name, course_path(course) %></li>
+    <div class="col-sm-4">
+      <div class="card card-block">
+        <h3 class="card-title"><%= link_to course.name, course_path(course) %></h3>
+        <p class="card-text"><%= course.description %></p>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
 
 <hr>
 

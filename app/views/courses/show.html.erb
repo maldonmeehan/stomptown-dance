@@ -1,19 +1,26 @@
 <% content_for(:title, "Course | Stomptown Dance Lessons") %>
 
-<h2>Course: <%= @course.name %></h2>
-<h4>Description: <%= @course.description %></h4>
+<h2><%= @course.name %></h2>
+<h4><%= @course.description %></h4>
 
 <% if @course.sections.any? %>
-  <h4>Here are the classes for this course:</h4>
-  <ul>
-    <% @course.sections.each do |section| %>
-    <li><%= section.name %>, <%= section.level %>
-    <%= link_to "Edit Section", edit_course_section_path(@course, section), class: "btn btn-primary", id: "edit_section_js", remote: true  %>
-    <%= link_to "Delete Section", course_section_path(@course, section), class: "btn btn-danger", :data => {:confirm => "Are you sure?", :method => "delete"} %>
-    <%= link_to "Add a lesson", new_section_lesson_path(@course), class: "btn btn-primary" %>
-    </li>
+  <% @course.sections.each do |section| %>
+  <div class="row">
+    <div class="col-sm-6">
+      <h4><%= section.name %></h4>
+    </div>
+    <div class="col-sm-2"> <p class="bars">
+      <%= link_to "Delete Section", course_section_path(@course, section), class: "btn btn-danger", :data => {:confirm => "Are you sure?", :method => "delete"} %></p>
+    </div>
+    <div class="col-sm-2">
+      <p class="tune">
+      <%= link_to "Edit Section", edit_course_section_path(@course, section),  class: "btn btn-warning", id: "edit_section_js", remote: true  %></p>
+    </div>
+    <div class="col-sm-2"> <p class="bars">
+      <%= link_to "Add a lesson", new_section_lesson_path(@course), class: "btn btn-primary" %></p>
+    </div>
+  </div>
     <% end %>
-  </ul>
   <% else %>
   <p>There are no sections yet!</p>
   <% end %>
