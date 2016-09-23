@@ -12,7 +12,7 @@ class FiguresController < ApplicationController
     @dance = Dance.find(params[:dance_id])
     @figure = @dance.figures.new(figure_params)
     if @figure.save
-      flash[:notice] = "Figure had successfully added!"
+      flash[:notice] = "Figure has be successfully added!"
       redirect_to dance_path(@dance)
     else
       render :new
