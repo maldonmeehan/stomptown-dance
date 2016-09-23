@@ -9,6 +9,10 @@ class DancesController < ApplicationController
 
   def new
     @dance = Dance.new
+    respond_to do |format|
+      format.html { render :new }
+      format.js
+    end
   end
 
   def create

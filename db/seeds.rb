@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-course_list = [ "Irish Set Dance", "Irish Ceili Dance", "Irish Sean-nos Dance", "Appalachian Clogging", "Cape Breton Step Dance", "Percussive Choreography", "Percussive Improvization" ]
+course_list = [ "Irish Set Dance", "Irish Ceili Dance", "Irish Sean-nos Dance", "Appalachian Clogging", "Cape Breton Step Dance", "Percussive Choreography", "Percussive Improvisation" ]
 
 course_list.each do |name|
   Course.create( name: name )
