@@ -12,4 +12,5 @@ describe "the edit a course process" do
     expect(page).to have_content 'Course Two'
   end
 
+
 end

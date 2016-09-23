@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "the add a course process" do
-  it "adds a new course" do
+  it "adds a new course", js: true do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user, :run_callbacks => false)
     visit courses_path
