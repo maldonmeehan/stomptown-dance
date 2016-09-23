@@ -1,6 +1,7 @@
 <% content_for(:title, "Course | Stomptown Dance Lessons") %>
 
 <h2>Course: <%= @course.name %></h2>
+<h4>Description: <%= @course.description %></h4>
 
 <% if @course.sections.any? %>
   <h4>Here are the classes for this course:</h4>
