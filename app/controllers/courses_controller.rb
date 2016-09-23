@@ -11,10 +11,6 @@ class CoursesController < ApplicationController
 
   def new
     @course = Course.new
-    respond_to do |format|
-      format.html { render :new }
-      format.js
-    end
   end
 
   def edit
@@ -29,7 +25,10 @@ class CoursesController < ApplicationController
     @course = Course.new(course_params)
     if @course.save
       flash[:notice] = "Course successfully added!"
-      redirect_to course_path(@course)
+      respond_to do |format|
+        format.html { redirect_to courses_path }
+        format.js
+      end
     else
       render :new
     end

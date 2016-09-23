@@ -9,17 +9,15 @@ class DancesController < ApplicationController
 
   def new
     @dance = Dance.new
-    respond_to do |format|
-      format.html { render :new }
-      format.js
-    end
   end
 
   def create
     @dance = Dance.new(dance_params)
     if @dance.save
-      flash[:notice] = "Dance successfully added!"
-      redirect_to  dances_path(@dance)
+      respond_to do |format|
+        format.html { redirect_to dances_path }
+        format.js
+      end
     else
       render :new
     end
