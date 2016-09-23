@@ -1,13 +1,18 @@
 <% provide(:title, "Dances | Stomptown Dance Lessons") %>
 
-<h1>List of Dances</h1>
+<h1>Dances</h1>
 
-
-<ul>
+<div class="row">
   <% @dances.each do |dance| %>
-    <li><%= link_to dance.name, dance_path(dance) %></li>
+    <div class="col-sm-4">
+      <div class="card card-block">
+        <h3 class="card-title"><%= link_to dance.name, dance_path(dance) %></h3>
+        <h6 class="card-subtitle text-muted"><%= dance.style %> from county <%= dance.county %>, Ireland.</h6>
+        <p class="card-text"><%= dance.note %></p>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
 
 <hr>
 <%= link_to "New Dance", new_dance_path, class: "btn btn-primary", id: "new_dance_js", remote: true  %>
