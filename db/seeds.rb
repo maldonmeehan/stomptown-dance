@@ -12,16 +12,41 @@ course_list.each do |name|
   Course.create( name: name )
 end
 
-section_list = [ "Dances of Connemara", "Beginner", 1, 1 ]
+section_list = [
+  [ "Dances of Connemara", "Beginner", 1, 1 ],
+  [ "Dances of Connemara", "Intermediate", 2, 1 ],
+  [ "Dances of Connemara", "Advanced", 3, 1 ],
+  [ "Dances of Cork", "Beginner", 1, 1 ],
+  [ "Dances of Clare", "Beginner", 1, 1 ],
+  [ "Dances of Kerry", "Beginner", 1, 1 ],
+  [ "Dances of Mayo", "Beginner", 1, 1 ],
+  [ "Dances of Limerick", "Beginner", 6, 1 ],
+  [ "Line Dances", "Beginner", 1, 2 ],
+  [ "Circle Dances", "Beginner", 1, 2 ],
+  [ "Four Hands", "Intermediate", 1, 2 ],
+  [ "Eight Hands", "Advanced", 1, 2 ],
+  [ "Jigs", "Beginner", 1, 3 ],
+  [ "Jigs", "Intermediate", 1, 3 ],
+  [ "Jigs", "Advanced", 1, 3 ],
+  [ "Reels", "Beginner", 1, 3 ],
+  [ "Reels", "Intermediate", 1, 3 ],
+  [ "Reels", "Advanced", 1, 3 ],
+]
 
 section_list.each do |name, level, number, course_id|
   Section.create( name: name, level: level, number: number, course_id: course_id )
 end
 
+# lesson_list = [ "Reels", "Learn this step......", "https://youtu.be/o4N0OpHyRxI", "Step shuffle down toe", 1, 3 ]
+#
+# lesson_list.each do |name, content, video, callers_notes, number, section_id|
+#   Lesson.create( name: name, content: content, video: video, callers_notes: callers_notes, number: number, section_id: section_id )
+# end
+
 dance_list = [
-  [ "Connemara Set", "Galway", "Irish Set", "First sides are on the right of first tops. This set can be danced with the connemara battering step. Most moves are danced for 6 bars and dancers 'step it out' for the last 2 bars. The fourth figure is traditionally danced to the tune of 'Maggie in the Woods'." ],
-  [ "Clare Plain Set", "Clair", "Irish Set", "This set can be danced with several clare battering step, including dance at home steps and advance retire steps." ],
-  [ "Ballyvourney Jig Set", "Cork", "Irish Set", "Traditional danced as indivdual figures today all figures are danced as one dance." ]
+  [ "Connemara Set", "Galway", "Irish Set Dance", "First sides are on the right of first tops. This set can be danced with the connemara battering step. Most moves are danced for 6 bars and dancers 'step it out' for the last 2 bars. The fourth figure is traditionally danced to the tune of 'Maggie in the Woods'." ],
+  [ "Clare Plain Set", "Clare", "Irish Set Dance", "This set can be danced with several clare battering step, including dance at home steps and advance retire steps." ],
+  [ "Ballyvourney Jig Set", "Cork", "Irish Set Dance", "Traditional danced as indivdual figures today all figures are danced as one dance." ]
 ]
 
 dance_list.each do |name, county, style, note|
@@ -29,14 +54,28 @@ dance_list.each do |name, county, style, note|
 end
 
 figure_list = [
-  ["First", "Ladies Chain", "Reels", 160, 1],
-  ["Second", "Back to Back", "Reels", 192, 1],
-  ["Third", "Christmas", "Reels", 184, 1],
-  ["Fourth", "Maggie in the Woods", "Polka", 96, 1],
+# connemara
+  ["First", "Ladies Chain", "Reels", 160, 1, 1],
+  ["Second", "Back to Back", "Reels", 192, 2, 1],
+  ["Third", "Christmas", "Reels", 184, 3, 1],
+  ["Fourth", "Maggie in the Woods", "Polka", 96, 4, 1],
+# clare plain
+  ["First", "Pass Through", "Reels", 112, 1, 2],
+  ["Second", "Under the Wing", "Reels", 128, 2, 2],
+  ["Third", "Chase the Ladies", "Reels", 176, 3, 2],
+  ["Fourth", "Three and One", "Reels", 256, 4, 2],
+  ["Fifth", "The Gallop", "Jigs", 160, 5, 2],
+  ["Sixth", "Ladies In", "Reels", 192, 6, 2],
+# Ballyvourney
+  ["First", "Swing Your Own", "Slides", 88, 1, 3],
+  ["Second", "Swing Your Opposite", "Slides", 104, 2, 3],
+  ["Third", "Christmas", "Slides", 104, 3, 3],
+  ["Fourth", "Swing All Around", "Slides", 136, 4, 3],
+  ["Fifth", "Chain", "Slides", 112, 5, 3]
 ]
 
-figure_list.each do |figure, title, tune, bar_total, dance_id|
-  Figure.create( figure: figure, title: title, tune: tune, bar_total: bar_total, dance_id: dance_id )
+figure_list.each do |figure, title, tune, bar_total, number, dance_id|
+  Figure.create( figure: figure, title: title, tune: tune, bar_total: bar_total, number: number, dance_id: dance_id )
 end
 
 instruction_list = [
