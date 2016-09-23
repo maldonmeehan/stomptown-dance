@@ -16,7 +16,7 @@ describe "the add a figure process" do
     expect(page).to have_content 'Figure has be successfully added!'
   end
 
-  it "no name is entered for figure", js: true do
+  it "no number is entered for figure", js: true do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user, :run_callbacks => false)
     dance = FactoryGirl.create(:dance)

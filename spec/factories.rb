@@ -30,6 +30,7 @@ FactoryGirl.define do
     tune("Reels")
     title("Ladies Chain")
     bar_total(200)
+    dance
   end
 
   factory(:instruction) do
