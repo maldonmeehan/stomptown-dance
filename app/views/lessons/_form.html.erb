@@ -3,6 +3,14 @@
 <%= form_for [@section, @lesson] do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name, class: "form-control" %>
+  <%= f.label :content %>
+  <%= f.text_field :content, class: "form-control" %>
+  <%= f.label :video %>
+  <%= f.text_field :video, class: "form-control" %>
+  <%= f.label :callers_notes %>
+  <%= f.text_field :callers_notes, class: "form-control" %>
+  <%= f.label :number %>
+  <%= f.number_field :number, class: "form-control" %>
   <br>
   <%= f.submit class: "btn btn-primary" %>
 <% end %>

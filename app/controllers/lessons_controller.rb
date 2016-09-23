@@ -1,5 +1,15 @@
 class LessonsController < ApplicationController
 
+  def show
+    @section = Section.find(params[:section_id])
+    @lesson = @Lesson.find(params[:id])
+  end
+
+  def show
+    @section = Section.find(params[:section_id])
+    @lesson = @section.lessons.new
+  end
+
   def new
     @section = Section.find(params[:section_id])
     @lesson = @section.lessons.new
@@ -40,6 +50,6 @@ class LessonsController < ApplicationController
 
   private
   def lesson_params
-    params.require(:lesson).permit(:name)
+    params.require(:lesson).permit(:name, :content, :video, :callers_notes, :number)
   end
 end

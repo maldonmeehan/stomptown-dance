@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-23T09:54:48-07:00">2016-09-23T09:54:48-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-23T12:11:25-07:00">2016-09-23T12:11:25-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">91.35%</span></span>
+    (<span class="covered_percent"><span class="green">90.86%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.27
+         1.28
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>58</b> files in total.
-    <b>555</b> relevant lines. 
-    <span class="green"><b>507</b> lines covered</span> and
-    <span class="red"><b>48</b> lines missed </span>
+    <b>569</b> relevant lines. 
+    <span class="green"><b>517</b> lines covered</span> and
+    <span class="red"><b>52</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -122,11 +122,11 @@
       
       <tr>
         <td class="strong"><a href="#a5204d5b8d726c6491ffddc7985793f38be85295" class="src_link" title="app/controllers/lessons_controller.rb">app/controllers/lessons_controller.rb</a></td>
-        <td class="red strong">28.57 %</td>
-        <td>45</td>
-        <td>28</td>
-        <td>8</td>
-        <td>20</td>
+        <td class="red strong">29.41 %</td>
+        <td>55</td>
+        <td>34</td>
+        <td>10</td>
+        <td>24</td>
         <td>0.3</td>
       </tr>
       
@@ -223,9 +223,9 @@
       <tr>
         <td class="strong"><a href="#0a045be3784753567a55ede3b3598decfcf84fb2" class="src_link" title="app/models/lesson.rb">app/models/lesson.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>5</td>
-        <td>3</td>
-        <td>3</td>
+        <td>9</td>
+        <td>7</td>
+        <td>7</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -593,11 +593,11 @@
       <tr>
         <td class="strong"><a href="#ada24e76c9e857f4a6ddb1ec5023c852698c4718" class="src_link" title="spec/models/lesson_spec.rb">spec/models/lesson_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>6</td>
-        <td>4</td>
-        <td>4</td>
+        <td>10</td>
+        <td>8</td>
+        <td>8</td>
         <td>0</td>
-        <td>1.5</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -627,7 +627,7 @@
         <td>24</td>
         <td>24</td>
         <td>0</td>
-        <td>4.8</td>
+        <td>5.3</td>
       </tr>
       
     </tbody>
@@ -2071,11 +2071,11 @@
         <div class="source_table" id="a5204d5b8d726c6491ffddc7985793f38be85295">
   <div class="header">
     <h3>app/controllers/lessons_controller.rb</h3>
-    <h4><span class="red">28.57 %</span> covered</h4>
+    <h4><span class="red">29.41 %</span> covered</h4>
     <div>
-      <b>28</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>20</b> lines missed.</span>
+      <b>34</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>24</b> lines missed.</span>
     </div>
   </div>
   
@@ -2097,7 +2097,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  def new</code>
+          <code class="ruby">  def show</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="4">
@@ -2109,7 +2109,7 @@
         <li class="missed" data-hits="0" data-linenumber="5">
           
           
-          <code class="ruby">    @lesson = @section.lessons.new</code>
+          <code class="ruby">    @lesson = @Lesson.find(params[:id])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -2127,7 +2127,7 @@
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">  def create</code>
+          <code class="ruby">  def show</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="9">
@@ -2139,37 +2139,37 @@
         <li class="missed" data-hits="0" data-linenumber="10">
           
           
-          <code class="ruby">    @lesson = @section.lessons.new(lesson_params)</code>
+          <code class="ruby">    @lesson = @section.lessons.new</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby">    if @lesson.save</code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby">      redirect_to section_path(@lesson.section)</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    else</code>
+          <code class="ruby">  def new</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="14">
           
           
-          <code class="ruby">      render :new</code>
+          <code class="ruby">    @section = Section.find(params[:section_id])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="missed" data-hits="0" data-linenumber="15">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">    @lesson = @section.lessons.new</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
@@ -2187,7 +2187,7 @@
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">  def edit</code>
+          <code class="ruby">  def create</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="19">
@@ -2199,154 +2199,214 @@
         <li class="missed" data-hits="0" data-linenumber="20">
           
           
-          <code class="ruby">    @lesson = Lesson.find(params[:id])</code>
+          <code class="ruby">    @lesson = @section.lessons.new(lesson_params)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="missed" data-hits="0" data-linenumber="21">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    if @lesson.save</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def update</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="24">
-          
-          
-          <code class="ruby">    @section = Section.find(params[:section_id])</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="25">
-          
-          
-          <code class="ruby">    @lesson= Lesson.find(params[:id])</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="26">
-          
-          
-          <code class="ruby">    if @lesson.update(lesson_params)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="27">
-          
-          
-          <code class="ruby">      flash[:notice] = &quot;Lesson successfully edited!&quot;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="28">
+        <li class="missed" data-hits="0" data-linenumber="22">
           
           
           <code class="ruby">      redirect_to section_path(@lesson.section)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="30">
+        <li class="missed" data-hits="0" data-linenumber="24">
           
           
-          <code class="ruby">      render :edit</code>
+          <code class="ruby">      render :new</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="34">
+        <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
-          <code class="ruby">  def destroy</code>
+          <code class="ruby">  def edit</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="35">
+        <li class="missed" data-hits="0" data-linenumber="29">
+          
+          
+          <code class="ruby">    @section = Section.find(params[:section_id])</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="30">
           
           
           <code class="ruby">    @lesson = Lesson.find(params[:id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="36">
-          
-          
-          <code class="ruby">    @lesson.destroy</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="37">
-          
-          
-          <code class="ruby">    flash[:notice] = &quot;Lesson successfully deleted!&quot;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="38">
-          
-          
-          <code class="ruby">    redirect_to section_path(@lesson.section)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
+        <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
-          <code class="ruby">  private</code>
+          <code class="ruby">  def update</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="42">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="34">
           
-          <code class="ruby">  def lesson_params</code>
+          
+          <code class="ruby">    @section = Section.find(params[:section_id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="43">
+        <li class="missed" data-hits="0" data-linenumber="35">
           
           
-          <code class="ruby">    params.require(:lesson).permit(:name)</code>
+          <code class="ruby">    @lesson= Lesson.find(params[:id])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="missed" data-hits="0" data-linenumber="36">
+          
+          
+          <code class="ruby">    if @lesson.update(lesson_params)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="37">
+          
+          
+          <code class="ruby">      flash[:notice] = &quot;Lesson successfully edited!&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="38">
+          
+          
+          <code class="ruby">      redirect_to section_path(@lesson.section)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="40">
+          
+          
+          <code class="ruby">      render :edit</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="44">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def destroy</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="45">
+          
+          
+          <code class="ruby">    @lesson = Lesson.find(params[:id])</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="46">
+          
+          
+          <code class="ruby">    @lesson.destroy</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="47">
+          
+          
+          <code class="ruby">    flash[:notice] = &quot;Lesson successfully deleted!&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="48">
+          
+          
+          <code class="ruby">    redirect_to section_path(@lesson.section)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="51">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def lesson_params</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="53">
+          
+          
+          <code class="ruby">    params.require(:lesson).permit(:name, :content, :video, :callers_notes, :number)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
           
           
           <code class="ruby">end</code>
@@ -3057,8 +3117,8 @@
     <h3>app/models/lesson.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>7</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -3090,7 +3150,31 @@
           <code class="ruby">  validates :name, :presence =&gt; true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  validates :content, :presence =&gt; true</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  validates :video, :presence =&gt; true</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  validates :callers_notes, :presence =&gt; true</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  validates :number, :presence =&gt; true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">end</code>
@@ -8583,8 +8667,8 @@
     <h3>spec/models/lesson_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>4</b> relevant lines. 
-      <span class="green"><b>4</b> lines covered</span> and
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -8619,10 +8703,34 @@
         <li class="covered" data-hits="2" data-linenumber="5">
           <span class="hits">2</span>
           
+          <code class="ruby">  it { should validate_presence_of :content }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should validate_presence_of :video }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should validate_presence_of :callers_notes }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should validate_presence_of :number }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
+          
           <code class="ruby">  it { should belong_to :section }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">end</code>
@@ -9018,14 +9126,14 @@
           <code class="ruby">  config.around(:each) do |example|</code>
         </li>
       
-        <li class="covered" data-hits="31" data-linenumber="45">
-          <span class="hits">31</span>
+        <li class="covered" data-hits="35" data-linenumber="45">
+          <span class="hits">35</span>
           
           <code class="ruby">    DatabaseCleaner.cleaning do</code>
         </li>
       
-        <li class="covered" data-hits="31" data-linenumber="46">
-          <span class="hits">31</span>
+        <li class="covered" data-hits="35" data-linenumber="46">
+          <span class="hits">35</span>
           
           <code class="ruby">      example.run</code>
         </li>
@@ -9174,8 +9282,8 @@
           <code class="ruby">  config.after :each do</code>
         </li>
       
-        <li class="covered" data-hits="31" data-linenumber="71">
-          <span class="hits">31</span>
+        <li class="covered" data-hits="35" data-linenumber="71">
+          <span class="hits">35</span>
           
           <code class="ruby">    Warden.test_reset!</code>
         </li>

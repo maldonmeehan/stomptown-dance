@@ -14,13 +14,13 @@ end
 
 section_list = [
   [ "Dances of Connemara", "Beginner", 1, 1 ],
-  [ "Dances of Connemara", "Intermediate", 2, 1 ],
-  [ "Dances of Connemara", "Advanced", 3, 1 ],
+  [ "Battering Steps for Connemara Set", "Intermediate", 2, 1 ],
   [ "Dances of Cork", "Beginner", 1, 1 ],
   [ "Dances of Clare", "Beginner", 1, 1 ],
+  [ "Battering Steps for Clare Sets", "Intermediate", 2, 1 ],
   [ "Dances of Kerry", "Beginner", 1, 1 ],
   [ "Dances of Mayo", "Beginner", 1, 1 ],
-  [ "Dances of Limerick", "Beginner", 6, 1 ],
+  [ "Dances of Limerick", "Beginner", 1, 1 ],
   [ "Line Dances", "Beginner", 1, 2 ],
   [ "Circle Dances", "Beginner", 1, 2 ],
   [ "Four Hands", "Intermediate", 1, 2 ],

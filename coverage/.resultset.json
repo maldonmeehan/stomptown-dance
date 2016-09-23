@@ -69,8 +69,8 @@
         null,
         null,
         1,
-        31,
-        31,
+        35,
+        35,
         null,
         null,
         null,
@@ -95,7 +95,7 @@
         1,
         null,
         1,
-        31,
+        35,
         null,
         null,
         null,
@@ -860,6 +860,16 @@
         1,
         0,
         0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
         0,
         0,
         null,
@@ -998,6 +1008,10 @@
         1,
         1,
         null,
+        1,
+        1,
+        1,
+        1,
         1,
         null
       ],
@@ -1357,6 +1371,10 @@
         1,
         2,
         2,
+        2,
+        2,
+        2,
+        2,
         null
       ],
       "/Users/Guest/Desktop/stomptown-dance/spec/models/section_spec.rb": [
@@ -1376,6 +1394,6 @@
         null
       ]
     },
-    "timestamp": 1474649688
+    "timestamp": 1474657885
   }
 }

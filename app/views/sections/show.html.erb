@@ -8,7 +8,8 @@
   <ul>
     <% @section.lessons.each do |lesson| %>
       <li>
-        <%= lesson.name %> |
+        <%= lesson.name %>
+
         <%= link_to "Edit",  edit_section_lesson_path(@section, lesson) %> |
         <%= link_to "Delete", section_lesson_path(@section, lesson),
                                  :data => {:confirm => "Are you sure?",
