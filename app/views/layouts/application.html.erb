@@ -8,61 +8,63 @@
   </head>
 
   <body>
-    <div class="container">
-      <nav class="navbar navbar-default" role="navigation">
-         <div class="container-fluid">
-           <div class="navbar-header">
-             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6">
-               <span class="sr-only">Toggle navigation</span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-             </button>
-           </div>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">Stomptown Dance</a>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
 
-           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-             <ul class="nav nav-tabs pull-right">
-               <li><%= link_to "Courses", courses_path %></li>
-               <li><%= link_to "Dances", dances_path %></li>
-               <li><%= link_to "Contact", static_pages_contact_path %></li>
-               <% if current_user %>
-                 <li><%= link_to "Logout", destroy_user_session_path, :method => "delete" %></li>
-               <% else %>
-                 <li><%= link_to "Login", new_user_session_path %></li>
-                 <li><%= link_to "Sign up", new_user_registration_path %></li>
-               <% end %>
-            </ul>
-           </div><!-- /.navbar-collapse -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+          <ul class="nav nav-tabs pull-right">
+            <li class="active"><%= link_to "Courses", courses_path %></li>
+            <li><%= link_to "Dances", dances_path %></li>
+            <li><%= link_to "Contact", static_pages_contact_path %></li>
+            <% if current_user %>
+             <li><%= link_to "Logout", destroy_user_session_path, :method => "delete" %></li>
+            <% else %>
+             <li><%= link_to "Login", new_user_session_path %></li>
+             <li><%= link_to "Sign up", new_user_registration_path %></li>
+            <% end %>
+          </ul>
+         </div><!-- /.navbar-collapse -->
+       </div>
+     </nav>
+
+     <div class="push-down container">
+       <% if current_user %>
+         <p class="navbar-text navbar-right nav_user">Signed in as <a href="#" class="navbar-link"><%= current_user.email %></a></p>
+       <% else %>
+         <p class="navbar-text navbar-right nav_user">Not Logged In</p>
+       <% end %>
+     </div>
+     <div class="push-down container">
+       <% if flash[:notice] %>
+         <div class="alert alert-info push-down">
+           <%= flash[:notice] %>
          </div>
-       </nav>
+       <% end %>
+       <% if flash[:alert] %>
+         <div class="alert alert-danger push-down">
+           <%= flash[:alert] %>
+         </div>
+       <% end %>
+     </div>
 
-      <header class="page-header">
-        <h2 class="header">Stomptown Dance Lessons</h2>
-      </header>
-
-        <div class="signed-in-as">
-        <% if current_user %>
-          <p class="navbar-text navbar-right nav_user">Signed in as <a href="#" class="navbar-link"><%= current_user.email %></a></p>
-        <% else %>
-          <p class="navbar-text navbar-right nav_user">Not Logged In</p>
-        <% end %>
-      </div>
-      <div class="push-down container">
-        <% if flash[:notice] %>
-          <div class="alert alert-info push-down">
-            <%= flash[:notice] %>
-          </div>
-        <% end %>
-        <% if flash[:alert] %>
-          <div class="alert alert-danger push-down">
-            <%= flash[:alert] %>
-          </div>
-          <% end %>
-      </div>
-
-      <div class="push-down container">
-        <%= yield %>
+    <div class="push-down container">
+      <%= yield %>
+    </div>
+    <div class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <p class="navbar-text pull-left">&copy; Maldon Meehan</p>
+        <a href="https://www.youtube.com/user/seannosdance/" class="navbar-btn btn-danger btn pull-right">Subscribe to Youtube</a>
       </div>
     </div>
+    
   </body>
 </html>
