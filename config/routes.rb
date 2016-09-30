@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root :to => "courses#index"
 
+  get 'static_pages/contact'
+
   resources :courses do
     resources :sections, :except => [:show, :index]
   end

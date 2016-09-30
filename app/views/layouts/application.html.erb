@@ -11,6 +11,7 @@
       <ul class="nav nav-tabs pull-right">
         <li><%= link_to "Courses", courses_path %></li>
         <li><%= link_to "Dances", dances_path %></li>
+        <li><%= link_to "Contact", static_pages_contact_path %></li>
 
         <% if user_signed_in? %>
           <li><%= link_to "Sign Out", destroy_user_session_path, method: 'delete'  %></li>

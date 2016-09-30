@@ -54,6 +54,7 @@ If you have any questions please feel free to contact Maldon on github
 ## Technologies Used
 
 * Ruby on Rails
+* AJAX
 * Postgres
 
 ### License
