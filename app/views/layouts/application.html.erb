@@ -6,6 +6,8 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
+  <body>
   <div class="container">
     <header class="page-header">
       <ul class="nav nav-tabs pull-right">
@@ -23,8 +25,7 @@
       <h2 class="header">Stomptown Dance Lessons</h2>
     </header>
 
-    <body>
-      <div class="signed-in-as">
+        <div class="signed-in-as">
         <% if current_user %>
           <p class="navbar-text navbar-right nav_user">Signed in as <a href="#" class="navbar-link"><%= current_user.email %></a></p>
         <% else %>
@@ -33,8 +34,9 @@
       </div>
         <%= flash[:alert] %>
         <%= flash[:notice] %>
-      <%= yield %>
-    </body>
-
-  </div>
+      <div class="push-down container">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
 </html>
