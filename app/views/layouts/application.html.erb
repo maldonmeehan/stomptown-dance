@@ -22,7 +22,7 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
           <ul class="nav nav-tabs pull-right">
-            <li class="active"><%= link_to "Courses", courses_path %></li>
+            <li><%= link_to "Courses", courses_path %></li>
             <li><%= link_to "Dances", dances_path %></li>
             <li><%= link_to "Contact", static_pages_contact_path %></li>
             <% if current_user %>
@@ -62,9 +62,8 @@
     <div class="navbar navbar-default navbar-fixed-bottom">
       <div class="container">
         <p class="navbar-text pull-left">&copy; Maldon Meehan</p>
-        <a href="https://www.youtube.com/user/seannosdance/" class="navbar-btn btn-danger btn pull-right">Subscribe to Youtube</a>
+        <a href="https://www.youtube.com/user/seannosdance/" class="navbar-btn btn-danger btn pull-right" target="_blank">Subscribe to Youtube</a>
       </div>
     </div>
-    
   </body>
 </html>
