@@ -11,6 +11,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
+gem 'font-awesome-sass', '~> 4.6.2'
 
 group :development, :test do
   gem 'byebug', platform: :mri
