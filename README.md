@@ -43,6 +43,13 @@ $ rails s
 
 Navigate to `http://localhost:3000` in your browser of choice.
 
+## API: MailChimp Setup/Installation Requirements
+* Create an account with MailChimp at http://mailchimp.com/
+* Obtain an API key
+* Create a .env file and put
+* MAILCHIMP_API_KEY=YOURAPIKEYGOESHERE
+* MAILCHIMP_LIST_ID=YOURLISTIDKEYGOESHERE
+
 ## Known Bugs
 
 No known bugs at this point
