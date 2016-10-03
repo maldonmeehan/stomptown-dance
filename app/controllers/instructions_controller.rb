@@ -10,8 +10,10 @@ class InstructionsController < ApplicationController
     @instruction = @figure.instructions.new(instruction_params)
     if @instruction.save
       flash[:notice] = "Instructions successfully added!"
-      redirect_to :back
-    else
+      respond_to do |format|
+        format.html { redirect_to dances_path(@instruction.figure) }
+        format.js
+      end
       render :new
     end
   end

@@ -1,6 +1,6 @@
 <%= render('layouts/errors', :object => @instruction) %>
 
-<%= form_for [@figure, @instruction] do |f| %>
+<%= form_for [@figure, @instruction], remote: true do |f| %>
   <%= f.label :number %>
   <%= f.text_field :number, class: "form-control" %>
   <br>

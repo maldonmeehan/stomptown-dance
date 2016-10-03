@@ -1,4 +1,4 @@
-<% provide(:title, "Dannces | Stomptown Dance Lessons") %>
+<% provide(:title, "Dances | Stomptown Dance Lessons") %>
 
 <div class="dance-details">
   <h1><%= @dance.name %></h1>
@@ -15,14 +15,37 @@
     <div class="col-sm-6"><h4>Figure <%= figure.number %>: <%= figure.title %></h4></div>
     <div class="col-sm-2"><%= link_to "Edit Figure", edit_dance_figure_path(@dance, figure), class: "btn btn-primary" %></div>
     <div class="col-sm-2"><%= link_to "Delete Figure", dance_figure_path(@dance, figure), class: "btn btn-danger", :data => {:confirm => "Are you sure?", :method => "delete"} %></div>
-    <div class="col-sm-2"><%= link_to "Add Instructions", new_figure_instruction_path(figure), class: "btn btn-primary" %></div>
+    <div class="col-sm-2"><%= link_to "Add Instructions", new_figure_instruction_path(figure), class: "btn btn-primary", id: "new_instruction_js", remote: true %></div>
   </div>
+  <% if figure.instructions.any? %>
+    <ul>
+      <% figure.instructions.each do |instruction| %>
+        <li>
+          <%= instruction.number %> |
+          <%= instruction.move %> |
+          <%= instruction.call %> |
+          <%= instruction.instruction %> |
+          <%= instruction.bars %> |
+
+          <%= link_to "Edit Instructions", edit_figure_instruction_path(figure, instruction) %> |
+          <%= link_to "Delete Instructions", figure_instruction_path(figure, instruction),
+                                   :data => {:confirm => "Are you sure?",
+                                                  :method => "delete"} %>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>There are no intructions yet!</p>
+  <% end %>
     <% end %>
+
   <% else %>
   <p>There are no figures yet!</p>
   <% end %>
 
 <hr>
+
+
 <p><%= link_to "Add Figures", new_dance_figure_path(@dance), class: "btn btn-primary" %></p>
 <p><%= link_to "Edit Dance", edit_dance_path(@dance), id: "edit_dance_js", remote: true %></p>
 <p><%= link_to "Delete Dance", dance_path(@dance),
