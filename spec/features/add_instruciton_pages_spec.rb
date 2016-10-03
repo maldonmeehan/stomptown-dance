@@ -11,6 +11,7 @@ describe "the add instructions process" do
     fill_in "Number", :with => "1"
     fill_in "Move", :with => "Tops"
     fill_in "Call", :with => "House"
+    fill_in "Instruction", :with => "Crossed hands dance anti-clockwise around the set."
     fill_in "Bars", :with => 8
     click_on "Create Instruction"
     expect(page).to have_content 'Instructions successfully added!'

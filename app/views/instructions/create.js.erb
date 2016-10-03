@@ -1,0 +1,3 @@
+$('#new_instruction_form').remove();
+$('#new_instruction_js').show();
+$('#instruction_list').append('<li><%= link_to @instruction.id, dances_path(@instruction)%></li>')

@@ -10,7 +10,7 @@
 #     visit dance_path(dance)
 #     click_on 'Edit Instructions'
 #     fill_in 'Number', :with => '2'
-#     click_on 'Update Instruction'
+#     click_on 'Edit Instruction'
 #     expect(page).to have_content 'Instruction successfully eddited!'
 #   end
 #

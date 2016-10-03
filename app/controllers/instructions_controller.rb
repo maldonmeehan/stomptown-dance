@@ -14,7 +14,6 @@ class InstructionsController < ApplicationController
         format.html { redirect_to dances_path(@instruction.figure) }
         format.js
       end
-      render :new
     end
   end
 
