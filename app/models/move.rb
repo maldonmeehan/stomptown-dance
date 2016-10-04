@@ -1,4 +1,4 @@
-class MovesAnswer < ApplicationRecord
+class Move < ActiveRecord::Base
   belongs_to :figure
-  belongs_to :answer
+  belongs_to :instruction
 end
