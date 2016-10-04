@@ -1,5 +1,5 @@
 class Instruction < ActiveRecord::Base
-  belongs_to :figure
+  has_many :figures, through: :moves
 
   validates :number, :presence => true
 end

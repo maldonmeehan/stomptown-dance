@@ -22,28 +22,32 @@ number
 section_id
 (belongs_to sections)
 
-###Phase two
-
 ####dances
 name
 county
 style
 notes
-(has_many instructions)
 
-####instructions
+####figures
 title
 figure
 tune
 bar_total
+dance_id
+number
+(has_many instructions)
+
+####instructions
+figure
 move
 number
 instruction
 bars
 call
-dance_id
-(belongs_to dances)
+figure_id
+(belongs_to figure)
 
+###Phase two
 ####musics
 tune
 bars
@@ -51,3 +55,4 @@ title
 artist
 track  
 track_title
+figure_id
