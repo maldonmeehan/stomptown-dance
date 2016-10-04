@@ -7,6 +7,12 @@
   <h4>Notes: <%= @dance.note %></h4>
 </div>
 
+<%= link_to "Add Figures", new_dance_figure_path(@dance), class: "btn btn-primary" %>
+<%= link_to "Edit Dance", edit_dance_path(@dance), class: "btn btn-warning", id: "edit_dance_js", remote: true %>
+<%= link_to "Delete Dance", dance_path(@dance), class: "btn btn-danger",
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %>
+<hr>
 <% if @dance.figures.any? %>
   <% @dance.figures.each do |figure| %>
   <div class="row">
@@ -39,12 +45,3 @@
   <% else %>
   <p>There are no figures yet!</p>
   <% end %>
-
-<hr>
-
-
-<p><%= link_to "Add Figures", new_dance_figure_path(@dance), class: "btn btn-primary" %></p>
-<p><%= link_to "Edit Dance", edit_dance_path(@dance), id: "edit_dance_js", remote: true %></p>
-<p><%= link_to "Delete Dance", dance_path(@dance),
-                         :data => {:confirm => "You sure?",
-                                   :method => "delete"} %></p>
