@@ -2,12 +2,7 @@ class LessonsController < ApplicationController
 
   def show
     @section = Section.find(params[:section_id])
-    @lesson = @Lesson.find(params[:id])
-  end
-
-  def show
-    @section = Section.find(params[:section_id])
-    @lesson = @section.lessons.new
+    @lesson = Lesson.find(params[:id])
   end
 
   def new
