@@ -8,8 +8,6 @@
 </div>
 
 <% if @dance.figures.any? %>
-  <h4>Here are the figures for this dance:</h4>
-
   <% @dance.figures.each do |figure| %>
   <div class="row">
     <div class="col-sm-8"><h4>Figure <%= figure.number %>: <%= figure.title %> ~ <%= figure.tune %> ~ <%= figure.bar_total %> bars</h4></div>

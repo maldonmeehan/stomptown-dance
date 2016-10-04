@@ -80,12 +80,12 @@ end
 
 instruction_list = [
   # connemara figure one
-  [1, "All", "Lead Around/Lead Back", "All couples in crossed hand hold lead around anti-clockwise (6 bars). Dancers turn clockwise, the ladies under both raised arms (2 bars), and couples lead back to place (6 bars), face each other and 'step it out' (2 bars).", 16, 1],
-  [2, "All", "Swing", "All couples in ceili hold (6 bars), face center and 'step it out' (2 bars).", 8, 1],
-  [3, "Tops", "Advance & Retire", "in crossed hand advance & retire twice", 8, 1],
-  [4, "Tops", "House Around", "in crossed hand house around anit-clockwise (6 bars) and 'step it out'.", 8, 1],
-  [5, "Tops", "Swing", "in ceili hold (6 bars), face center and 'step it out' (2 bars).", 8, 1],
-  [6, "Sides", "Advance & Retire", "in crossed hand advance & retire twice", 8, 1],
+  [1, "All", "Lead Around", "Lead around anti-clockwise in cross hand hold (6 bars). Gents turn ladies clockwise (2 bars), and lead back to place (6 bars), face partner and step it (2 bars).", 16, 1],
+  [2, "All", "Swing", "Swing in ceili hold (6 bars), face center and step it out (2 bars).", 8, 1],
+  [3, "Tops", "Advance & Retire", "Advance & retire twice in cross hand hold", 8, 1],
+  [4, "Tops", "House Around", "House around anit-clockwise in cross hand hold (6 bars) and step it out.", 8, 1],
+  [5, "Tops", "Swing", "Swing (6 bars) and 'step it out' (2 bars).", 8, 1],
+  [6, "Sides", "Advance & Retire", "Avance & retire twice", 8, 1],
   [7, "Sides", "House Around", "in crossed hand house around anit-clockwise (6 bars) and 'step it out'.", 8, 1],
   [8, "Sides", "Swing", "in ceili hold (6 bars), face center and 'step it out' (2 bars).", 8, 1],
   [9, "Tops", "Ladies Chain", "Ladies chain right hand in right in the centre, left around the opposite gent who turns her clockwise underarm and dances anti-clockwise a ½ turn (4 bars). Ladies pass back Right to Right while gents dance ¾ turn clockwise to face their partners and step it out (4 bars).", 8, 1],
@@ -163,6 +163,41 @@ instruction_list = [
   [6, "All", "Dance 1/4 on", "in waltz hold dance one rotations at home, and move a quarter on the set.", 8, 4],
   [5, "All", "Circle", "advance and retire, advance and bring the next lady over.", 8, 4],
   [6, "All", "Dance home", "in waltz hold dance one rotations on the spot, and dance home.", 8, 4],
+
+  # clare plain set figure one
+  [1, "All", "Lead Around", "Lead around anti-clockwise in cross hand hold (6 bars). Gents turn ladies clockwise (2 bars)", 8, 5],
+  [2, "All", "Dance at Home", "In waltz hold, dance at home turning twice.", 8, 5],
+  [3, "Tops", "Pass Through", "Pass through right to right, right hand turn the lady to face into the set, pass back right to right, right hand turn the lady into waltz hold", 8, 5],
+  [4, "Tops", "Dance at Home", "In waltz hold, dance at home turning twice.", 8, 5],
+
+  # clare plain set figure two
+  [1, "All", "Lead Around", "Lead around anti-clockwise in cross hand hold (6 bars). Gents turn ladies clockwise (2 bars)", 8, 6],
+  # clare plain set figure Three
+  [1, "All", "Lead Around", "Lead around anti-clockwise in cross hand hold (6 bars). Gents turn ladies clockwise (2 bars)", 8, 7],
+  # clare plain set figure four
+  [1, "All", "Lead Around", "Lead around anti-clockwise in cross hand hold (6 bars). Gents turn ladies clockwise (2 bars)", 8, 8],
+  # clare plain set figure five
+  [1, "All", "Lead Around", "Lead around anti-clockwise in cross hand hold (6 bars). Gents turn ladies clockwise (2 bars)", 8, 9],
+  # clare plain set figure six
+  [1, "All", "Lead Around", "Lead around anti-clockwise in cross hand hold (6 bars). Gents turn ladies clockwise (2 bars)", 8, 10],
+
+  # Ballyvourney figure one
+  [1, "Tops", "House", "in waltz hold, dance 2 seting step and house around", 8, 11],
+  [2, "Tops", "Square the House", "In waltz hold, slide slide the couple on the right, poviot slide, 123 to oposite, House half-way, repeat all back to home.", 8, 11],
+  [3, "Tops", "Square the House", "In waltz hold slide in (1, 2, 123) and back, House half-way, repeat all back to home.", 8, 11],
+  [4, "Tops", "Swing", "in waltz hold swing your partner", 8, 11],
+  [5, "Sides", "House", "in waltz hold, dance 2 seting step and house around", 8, 11],
+  [6, "Sides", "Square the House", "In waltz hold, slide slide the couple on the right, poviot slide, 123 to oposite, House half-way, repeat all back to home.", 8, 11],
+  [7, "Sides", "Square the House", "In waltz hold slide in (1, 2, 123) and back, House half-way, repeat all back to home.", 8, 11],
+  [8, "Sides", "Swing", "in waltz hold swing your partner", 8, 11],
+  # Ballyvourney figure Two
+  [1, "Tops", "House", "in waltz hold, dance 2 seting step and house around", 8, 12],
+  # Ballyvourney figure Three
+  [1, "Tops", "House", "in waltz hold, dance 2 seting step and house around", 8, 13],
+  # Ballyvourney figure four
+  [1, "Tops", "House", "in waltz hold, dance 2 seting step and house around", 8, 14],
+  # Ballyvourney figure five
+  [1, "Tops", "House", "in waltz hold, dance 2 seting step and house around", 8, 15],
 ]
 
 instruction_list.each do |number, move, call, instruction, bars, figure_id|
