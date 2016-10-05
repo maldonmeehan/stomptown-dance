@@ -15,6 +15,10 @@
 <hr>
 <% if @dance.figures.any? %>
   <% @dance.figures.each do |figure| %>
+  <div class="video">
+    <%= raw(figure.video) %>
+  </div>
+
   <div class="row">
     <div class="col-sm-8"><h4>Figure <%= figure.number %>: <%= figure.title %> ~ <%= figure.tune %> ~ <%= figure.bar_total %> bars</h4></div>
     <div class="col-sm-4">

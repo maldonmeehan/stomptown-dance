@@ -55,27 +55,27 @@ end
 
 figure_list = [
 # connemara
-  ["First", "Ladies Chain", "Reels", 160, 1, 1],
-  ["Second", "Back to Back", "Reels", 192, 2, 1],
-  ["Third", "Christmas", "Reels", 184, 3, 1],
-  ["Fourth", "Maggie in the Woods", "Polka", 96, 4, 1],
+  ["First", "Ladies Chain", "Reels", 160, 1, 1, "<iframe width='560' height='315' src='https://www.youtube.com/embed/3R0vCMYtHDQ' frameborder='0' allowfullscreen></iframe>"],
+  ["Second", "Back to Back", "Reels", 192, 2, 1, '<iframe width="560" height="315" src="https://www.youtube.com/embed/bXSHp2GmXVc" frameborder="0" allowfullscreen></iframe>'],
+  ["Third", "Christmas", "Reels", 184, 3, 1, '<iframe width="560" height="315" src="https://www.youtube.com/embed/5-T870LmA28" frameborder="0" allowfullscreen></iframe>'],
+  ["Fourth", "Maggie in the Woods", "Polka", 96, 4, 1, '<iframe width="560" height="315" src="https://www.youtube.com/embed/MjWuNDaLeGQ" frameborder="0" allowfullscreen></iframe>'],
 # clare plain
-  ["First", "Pass Through", "Reels", 112, 1, 2],
-  ["Second", "Under the Wing", "Reels", 128, 2, 2],
-  ["Third", "Chase the Ladies", "Reels", 176, 3, 2],
-  ["Fourth", "Three and One", "Reels", 256, 4, 2],
-  ["Fifth", "The Gallop", "Jigs", 160, 5, 2],
-  ["Sixth", "Ladies In", "Reels", 192, 6, 2],
+  ["First", "Pass Through", "Reels", 112, 1, 2, '<iframe width="560" height="315" src="https://www.youtube.com/embed/pbNoM0oNJ0c" frameborder="0" allowfullscreen></iframe>'],
+  ["Second", "Under the Wing", "Reels", 128, 2, 2, '<iframe width="560" height="315" src="https://www.youtube.com/embed/9DN_kIUtUio" frameborder="0" allowfullscreen></iframe>'],
+  ["Third", "Chase the Ladies", "Reels", 176, 3, 2, '<iframe width="560" height="315" src="https://www.youtube.com/embed/IKzund8tmyw" frameborder="0" allowfullscreen></iframe>'],
+  ["Fourth", "Three and One", "Reels", 256, 4, 2, '<iframe width="560" height="315" src="https://www.youtube.com/embed/4zKyiyT8-VE" frameborder="0" allowfullscreen></iframe>'],
+  ["Fifth", "The Gallop", "Jigs", 160, 5, 2, '<iframe width="560" height="315" src="https://www.youtube.com/embed/WZ7g79-YtAM" frameborder="0" allowfullscreen></iframe>'],
+  ["Sixth", "Ladies In", "Reels", 192, 6, 2, '<iframe width="560" height="315" src="https://www.youtube.com/embed/UMl3qVciqKM" frameborder="0" allowfullscreen></iframe>'],
 # Ballyvourney
-  ["First", "Swing Your Own", "Slides", 88, 1, 3],
+  ["First", "Swing Your Own", "Slides", 88, 1, 3, '<iframe width="560" height="315" src="https://www.youtube.com/embed/ehDHrBaYhPE" frameborder="0" allowfullscreen></iframe>'],
   ["Second", "Swing Your Opposite", "Slides", 104, 2, 3],
   ["Third", "Christmas", "Slides", 104, 3, 3],
   ["Fourth", "Swing All Around", "Slides", 136, 4, 3],
   ["Fifth", "Chain", "Slides", 112, 5, 3]
 ]
 
-figure_list.each do |figure, title, tune, bar_total, number, dance_id|
-  Figure.create( figure: figure, title: title, tune: tune, bar_total: bar_total, number: number, dance_id: dance_id )
+figure_list.each do |figure, title, tune, bar_total, number, dance_id, video|
+  Figure.create( figure: figure, title: title, tune: tune, bar_total: bar_total, number: number, dance_id: dance_id, video: video )
 end
 
 instruction_list = [
