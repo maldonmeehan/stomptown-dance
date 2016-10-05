@@ -1,3 +1,0 @@
-class MovesController < ApplicationController
-
-end
