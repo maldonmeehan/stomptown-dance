@@ -1,24 +1,100 @@
 <% provide(:title, "Dances | Stomptown Dance Lessons") %>
 
-<div class="dance-details">
-  <h1><%= @dance.name %></h1>
-  <h4>County: <%= @dance.county %></h4>
-  <h4>Style: <%= @dance.style %></h4>
-  <h4>Notes: <%= @dance.note %></h4>
-</div>
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active"><a href="#instructions" data-toggle="tab">Instructions</a></li>
+  <li class=""><a href="#video" data-toggle="tab">Video</a></li>
+  <li class=""><a href="#callers-notes" data-toggle="tab">Callers Notes</a></li>
+  <li class=""><a href="#edit" data-toggle="tab">Edit</a></li>
+</ul>
 
-<%= link_to "Add Figures", new_dance_figure_path(@dance), class: "btn btn-primary" %>
-<%= link_to "Edit Dance", edit_dance_path(@dance), class: "btn btn-warning", id: "edit_dance_js", remote: true %>
-<%= link_to "Delete Dance", dance_path(@dance), class: "btn btn-danger",
-                         :data => {:confirm => "You sure?",
-                                   :method => "delete"} %>
-<hr>
-<% if @dance.figures.any? %>
-  <% @dance.figures.each do |figure| %>
-  <div class="video">
-    <%= raw(figure.video) %>
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade active in" id="instructions">
+    <div class="dance-details">
+      <h2><%= @dance.name %></h2>
+      <p>County: <%= @dance.county %></p>
+      <p>Style: <%= @dance.style %></p>
+      <p>Notes: <%= @dance.note %></p>
+      <% if @dance.figures.any? %>
+        <% @dance.figures.each do |figure| %>
+        <div class="row">
+          <div class="col-sm-6"><p>Figure <%= figure.number %>: <%= figure.title %></p></div>
+          <div class="col-sm-6"><p class="bars"><%= figure.tune %> ~ <%= figure.bar_total %> bars</p></div>
+        </div>
+
+        <% if figure.instructions.any? %>
+          <% figure.instructions.each do |instruction| %>
+            <div class="row">
+              <div class="col-sm-2"><p><%= instruction.move %></p></div>
+              <div class="col-sm-2"><p><%= instruction.call %></p></div>
+              <div class="col-sm-6"><p><%= instruction.instruction %></p></div>
+              <div class="col-sm-2"><p class="bars"><%= instruction.bars %></p></div>
+            </div>
+          <% end %>
+          <% else %>
+          <p>There are no intructions yet!</p>
+          <% end %>
+        <% end %>
+
+        <% else %>
+        <p>There are no figures yet!</p>
+        <% end %>
+
+    </div>
+  </div>
+  <div class="tab-pane fade" id="video">
+    <h2><%= @dance.name %></h2>
+    <div class="dance-details">
+      <% if @dance.figures.any? %>
+        <% @dance.figures.each do |figure| %>
+        <div class="row">
+          <div class="col-sm-6">
+            <%= raw(figure.video) %>
+            <p>Figure <%= figure.number %>: <%= figure.title %> ~ <%= figure.tune %> ~ <%= figure.bar_total %> bars</p>
+          </div>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 
+  <div class="tab-pane fade" id="callers-notes">
+    <div class="dance-details">
+      <h2><%= @dance.name %></h2>
+      <% if @dance.figures.any? %>
+        <% @dance.figures.each do |figure| %>
+
+        <div class="row" id="callers-card">
+          <div class="col-sm-8"><h4>Figure <%= figure.number %>: <%= figure.title %> ~ <%= figure.tune %> ~ <%= figure.bar_total %> bars</h4></div>
+        </div>
+        <% if figure.instructions.any? %>
+          <% figure.instructions.each do |instruction| %>
+            <div class="row">
+              <div class="col-sm-2"><h5><%= instruction.move %></h5></div>
+              <div class="col-sm-2"><h5><%= instruction.call %></h5></div>
+              <div class="col-sm-2"><h5 class="bars"><%= instruction.bars %></h5></div>
+            </div>
+          <% end %>
+          <% else %>
+          <p>There are no intructions yet!</p>
+          <% end %>
+        <% end %>
+
+        <% else %>
+        <p>There are no figures yet!</p>
+        <% end %>
+
+    </div>
+  </div>
+  <div class="tab-pane fade" id="edit">
+    <h2><%= @dance.name %></h2>
+    <%= link_to "Add Figures", new_dance_figure_path(@dance), class: "btn btn-primary" %>
+    <%= link_to "Edit Dance", edit_dance_path(@dance), class: "btn btn-warning", id: "edit_dance_js", remote: true %>
+    <%= link_to "Delete Dance", dance_path(@dance), class: "btn btn-danger",
+                             :data => {:confirm => "You sure?",
+                                       :method => "delete"} %>
+<div class="dance-details">
+  <% if @dance.figures.any? %>
+  <% @dance.figures.each do |figure| %>
   <div class="row">
     <div class="col-sm-8"><h4>Figure <%= figure.number %>: <%= figure.title %> ~ <%= figure.tune %> ~ <%= figure.bar_total %> bars</h4></div>
     <div class="col-sm-4">
@@ -27,25 +103,31 @@
       <%= link_to "Add Instructions", new_figure_instruction_path(figure), class: "btn btn-primary", id: "new_instruction_js", remote: true %>
     </div>
   </div>
-
   <% if figure.instructions.any? %>
-    <% figure.instructions.each do |instruction| %>
-      <div class="row">
-        <div class="col-sm-1"><h5><%= instruction.move %></h5></div>
-        <div class="col-sm-2"><h5><%= instruction.call %></h5></div>
-        <div class="col-sm-6"><h5><%= instruction.instruction %></h5></div>
-        <div class="col-sm-1"><h5 class="bars"><%= instruction.bars %></h5></div>
-        <div class="col-sm-2"><%= link_to "Edit Instructions", edit_figure_instruction_path(figure, instruction), id: "edit_instruction_js", remote: true %> |
-        <%= link_to "Delete Instructions", figure_instruction_path(figure, instruction),
-                                   :data => {:confirm => "Are you sure?",
-                                                  :method => "delete"} %></div>
-      </div>
-    <% end %>
-    <% else %>
-    <p>There are no intructions yet!</p>
-    <% end %>
+  <% figure.instructions.each do |instruction| %>
+  <div class="row">
+    <div class="col-sm-1"><h5><%= instruction.move %></h5></div>
+    <div class="col-sm-2"><h5><%= instruction.call %></h5></div>
+    <div class="col-sm-6"><h5><%= instruction.instruction %></h5></div>
+    <div class="col-sm-1"><h5 class="bars"><%= instruction.bars %></h5></div>
+    <div class="col-sm-2"><%= link_to "Edit Instructions", edit_figure_instruction_path(figure, instruction), id: "edit_instruction_js", remote: true %> | <%= link_to "Delete Instructions", figure_instruction_path(figure, instruction), :data => {:confirm => "Are you sure?", :method => "delete"} %></div>
+  </div>
   <% end %>
-
+  <% else %>
+  <p>There are no intructions yet!</p>
+  <% end %>
+  <% end %>
   <% else %>
   <p>There are no figures yet!</p>
   <% end %>
+</div>
+  </div>
+</div>
+
+
+<!-- <div class="dance-details">
+  <h1><%= @dance.name %></h1>
+  <h4>County: <%= @dance.county %></h4>
+  <h4>Style: <%= @dance.style %></h4>
+  <h4>Notes: <%= @dance.note %></h4>
+</div> -->

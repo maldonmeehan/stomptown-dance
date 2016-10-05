@@ -62,6 +62,7 @@ If you have any questions please feel free to contact Maldon on github
 * Ruby on Rails
 * AJAX
 * Postgres
+* Bootstrap
 
 ### License
 
