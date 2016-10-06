@@ -7,6 +7,7 @@ describe "the add instructions process" do
     figure = FactoryGirl.create(:figure)
     visit dances_path
     click_on 'Connemara Set Dance'
+    click_on 'Edit'
     click_on "Add Instructions"
     fill_in "Number", :with => "1"
     fill_in "Move", :with => "Tops"
@@ -23,6 +24,7 @@ describe "the add instructions process" do
     figure = FactoryGirl.create(:figure)
     visit dances_path
     click_on 'Connemara Set Dance'
+    click_on 'Edit'    
     click_on "Add Instructions"
     fill_in "Number", :with => ""
     fill_in "Move", :with => "Tops"

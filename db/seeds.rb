@@ -15,7 +15,7 @@ end
 section_list = [
   [ "Dances of Connemara", "Beginner", 1, 1 ],
   [ "Battering Steps for Connemara Set", "Intermediate", 2, 1 ],
-  [ "Dances of Cork", "Beginner", 1, 1 ],
+  [ "Dances of Cork", "Beginner", 2, 1 ],
   [ "Dances of Clare", "Beginner", 1, 1 ],
   [ "Battering Steps for Clare Sets", "Intermediate", 2, 1 ],
   [ "Dances of Kerry", "Beginner", 1, 1 ],
@@ -314,7 +314,7 @@ instruction_list = [
   [6, "Sides", "Square the House", "In waltz hold, slide slide the couple on the right, poviot slide, 123 to oposite, House half-way, repeat all back to home.", 8, 15],
   [7, "Sides", "Reverse Chain", "All face partners, take right arm, dance ½ turn around each other to face in the opposite direction. Gents face clockwise, ladies face counter-clockwise. All chain L hand, R hand etc. to meet partners in opposite place.", 8, 15],
   [8, "Sides", "Slide and Change", "In waltz hold slide in (1, 2, 123) and back, House half-way, repeat all back to home.", 16, 15],
-  [9, "All", "House", "House around to finish", 8, 15],  
+  [9, "All", "House", "House around to finish", 8, 15],
 ]
 
 instruction_list.each do |number, move, call, instruction, bars, figure_id|
