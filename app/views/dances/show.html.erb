@@ -11,14 +11,14 @@
   <div class="tab-pane fade active in" id="instructions">
     <div class="dance-details">
       <h2><%= @dance.name %></h2>
-      <p>County: <%= @dance.county %></p>
-      <p>Style: <%= @dance.style %></p>
-      <p>Notes: <%= @dance.note %></p>
+      <h5>County: <%= @dance.county %></h5>
+      <h5>Style: <%= @dance.style %></h5>
+      <p><%= @dance.note %></p>
       <% if @dance.figures.any? %>
         <% @dance.figures.each do |figure| %>
         <div class="row">
-          <div class="col-sm-6"><p>Figure <%= figure.number %>: <%= figure.title %></p></div>
-          <div class="col-sm-6"><p class="bars"><%= figure.tune %> ~ <%= figure.bar_total %> bars</p></div>
+          <div class="col-sm-6"><h5>Figure <%= figure.number %>: <%= figure.title %></h5></div>
+          <div class="col-sm-6"><h5 class="bars"><%= figure.tune %> ~ <%= figure.bar_total %> bars</h5></div>
         </div>
 
         <% if figure.instructions.any? %>
