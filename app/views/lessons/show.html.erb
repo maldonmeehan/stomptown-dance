@@ -1,9 +1,25 @@
 <h1><%= @section.name %></h1>
 
-<p><%= @lesson.name %></p>
-<p><%= @lesson.content %></p>
-<div class="embed-responsive embed-responsive-16by9">
-   <span class="embed-responsive-item"><%= raw(@lesson.video) %></span>
- </div>
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active"><a href="#content" data-toggle="tab">Content</a></li>
+  <li class=""><a href="#video" data-toggle="tab">Video</a></li>
+  <li class=""><a href="#notes" data-toggle="tab">Notes</a></li>
+</ul>
 
-<P><%= @lesson.callers_notes %></p>
+<div id="myTabContent" class="tab-content">
+
+  <div class="tab-pane fade active in" id="content">
+    <p><%= @lesson.name %></p>
+    <p><%= @lesson.content %></p>
+  </div>
+
+  <div class="tab-pane fade" id="video">
+    <div class="embed-responsive embed-responsive-16by9">
+       <span class="embed-responsive-item"><%= raw(@lesson.video) %></span>
+     </div>
+  </div>
+
+  <div class="tab-pane fade" id="notes">
+    <P><%= @lesson.callers_notes %></p>
+  </div>
+</div>
