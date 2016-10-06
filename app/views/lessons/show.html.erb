@@ -2,5 +2,8 @@
 
 <p><%= @lesson.name %></p>
 <p><%= @lesson.content %></p>
-<P><%= @lesson.video %></p>
+<div class="embed-responsive embed-responsive-16by9">
+   <span class="embed-responsive-item"><%= raw(@lesson.video) %></span>
+ </div>
+
 <P><%= @lesson.callers_notes %></p>

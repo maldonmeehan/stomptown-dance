@@ -46,10 +46,12 @@
     <div class="dance-details">
       <% if @dance.figures.any? %>
         <% @dance.figures.each do |figure| %>
+        <div class="embed-responsive embed-responsive-16by9">
+           <span class="embed-responsive-item"><%= raw(figure.video) %></span>
+         </div>
         <div class="row">
-          <div class="col-sm-6">
-            <%= raw(figure.video) %>
-            <p>Figure <%= figure.number %>: <%= figure.title %> ~ <%= figure.tune %> ~ <%= figure.bar_total %> bars</p>
+          <div class="col-sm-12">
+            <h4>Figure <%= figure.number %>: <%= figure.title %> ~ <%= figure.tune %> ~ <%= figure.bar_total %> bars</h4>
           </div>
         </div>
         <% end %>

@@ -31,13 +31,18 @@ section_list = [
   [ "Reels", "Beginner", 1, 3 ],
   [ "Reels", "Intermediate", 1, 3 ],
   [ "Reels", "Advanced", 1, 3 ],
+  [ "Brush Dance - 4 dancers", "Advanced", 1, 4 ],
+  [ "The History of the Brush Dance", "Intermediate", 1, 5 ],
+  [ "Early Years", "Beginning", 1, 6 ],
 ]
 
 section_list.each do |name, level, number, course_id|
   Section.create( name: name, level: level, number: number, course_id: course_id )
 end
 
-lesson_list = [ "Jigs", "This is a beginner jig step.", "https://youtu.be/o4N0OpHyRxI", "Step shuffle down toe", 1, 3 ]
+lesson_list = [
+  ["History of the Connemara Set", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", "<iframe width='560' height='315' src='https://www.youtube.com/embed/aC8vuMZTVMQ' frameborder='0' allowfullscreen></iframe>", "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", 1, 1 ],
+]
 
 lesson_list.each do |name, content, video, callers_notes, number, section_id|
   Lesson.create( name: name, content: content, video: video, callers_notes: callers_notes, number: number, section_id: section_id )
