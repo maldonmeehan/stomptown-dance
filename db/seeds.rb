@@ -1,10 +1,15 @@
-
 course_list = [
+  #1
   [ "Irish Set Dance", "Explore the most popular form of traditional social dancing in Ireland today. Sets are dance in square formation with intricate and rhythmic footwork. Learn to dance to reels, jigs, slides, polkas and hornpipes. This course is organized by county and will include the dance instructions, callers notes, battering steps and video." ],
+  #2
   [ "Irish Ceili Dance", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" ],
+  #3
   [ "Irish Sean-nós Dance", "Sean-nós literally meaning old-style is a highly improvisational, low to the ground, rhythmic dance form. Unlike Irish step dancers, Sean-nós dancers swing their hips and use their arms as forms of expressing the music. Traditionally a dancer danced solo on the hardwood of a half door or the round top of a barrel; as a result the steps are confined to a small space. In Sean-nós dance, the dancer is tied closely with the musician and the music. The dancer interprets the music." ],
+  #4
   [ "Percussive Choreography", "This course will focus on improvisation, rhythmic footwork and performance techniques. It will draw from Cape Breton dance, Québécois, American Clogging, Sean-nós Dance, Irish Old Style Step dance, Waltz Clog and more." ],
+  #5
   [ "Irish Brush Dance", "In this course we cover the basics of the traditional Irish brush dance. The brush dance is done with a brush or broom. There are many stories behind the brush dance. One story is that it was performed by the Travelers when they went from house to house selling items, including brushes(brooms). It is told that they would perform the dance and display the brush." ],
+  #6
   [ "History of Irish Dance", "Explore the rich history of Irish dance. We will cover the history of Irish dance from the earliest records to the present. We will explore the individual dance genres: Céilí dance, Set Dance, Sean-nós dance, Old-style Traditional and Step Dance, as well as 'Riverdance'." ]
 ]
 
@@ -13,26 +18,47 @@ course_list.each do |name, description|
 end
 
 section_list = [
+#1
   [ "Irish Set Dancing - Overview", "All levels", 1, 1],
+#2
   [ "Dances of Connemara", "All levels", 1, 1 ],
+#3
   [ "Dances of Cork", "All levels", 2, 1 ],
+#4
   [ "Dances of Clare", "All levels", 1, 1 ],
+#5
   [ "Dances of Kerry", "All levels", 1, 1 ],
+#6
   [ "Dances of Mayo", "All levels", 1, 1 ],
+#7
   [ "Dances of Limerick", "All levels", 1, 1 ],
+#8
   [ "Line Dances", "Beginner", 1, 2 ],
+#9
   [ "Circle Dances", "Beginner", 1, 2 ],
+#10
   [ "Four Hands", "Intermediate", 1, 2 ],
+#11
   [ "Eight Hands", "Advanced", 1, 2 ],
+#12
   [ "Sean-nós Steps", "Beginner", 1, 3 ],
+#13
   [ "Sean-nós Steps", "Intermediate", 1, 3 ],
+#14
   [ "Sean-nós Steps", "Advanced", 1, 3 ],
+#15
   [ "Musicians", "All levels", 1, 3 ],
+#16
   [ "Dancers", "All levels", 1, 3 ],
+#16
   [ "History", "All levels", 1, 3 ],
+#17
   [ "Music", "All levels", 1, 3 ],
+#18
   [ "Brush Dance - 4 dancers", "Advanced", 1, 4 ],
+#19
   [ "The History of the Brush Dance", "Intermediate", 1, 5 ],
+#20
   [ "Early Years", "Beginning", 1, 6 ],
 ]
 
@@ -41,49 +67,118 @@ section_list.each do |name, level, number, course_id|
 end
 
 lesson_list = [
-#Course: Irish Set Dance id 1
-# 1 Irish Set Dancing - Overview
-  [ "Irish Set Dancing - Early Years", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "Resources: Wikipedia https://en.wikipedia.org/wiki/Irish_set_dance", 1, 1 ],
+#Course: 1 Irish Set Dance, section 1 Irish Set Dancing - Overview
+  [ "Lesson 1", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 1, 1 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 1 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 1 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 1 ],
 # 2 Dances of Connemara
+  [ "Lesson 1", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 1, 2 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 2 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 2 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 2 ],
 # 3 Dances of Cork
+  [ "Lesson 1", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 1, 3 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 3 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 3 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 3 ],
 # 4 Dances of Clare
+  [ "Lesson 1", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 1, 4 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 4 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 4 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 4 ],
 # 5 Dances of Kerry
+[ "Lesson 1", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 1, 5 ],
+[ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 5 ],
+[ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 5 ],
+[ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 5 ],
 # 6 Dances of Mayo
+  [ "Lesson 1", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 1, 6 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 6 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 6 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 6 ],
 # 7 Dances of Limerick
-
-#seciton: Connemara id 1
-#seciton:  id 1
+  [ "Lesson 1", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 1, 7 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 7 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 7 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 7 ],
 
 #Irish Ceili Dance id 2
+#8 Line Dances
+  [ "Lesson 1", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 1, 8 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 8 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 8 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 8 ],
+#9 Circle Dances
+  ["Lesson 1", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 1, 9 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 9 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="3159 src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 9 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 9 ],
+#10 Four Hands
+  ["Lesson 1", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 1, 10 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 10 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 10 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 10 ],
+#11 Eight Hands
+  ["Lesson 1", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 1, 11 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 11 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 11 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 11 ],
+# Irish Sean-nós id 3
+# Sean-nós Steps Beginner 12
+  [ "Jigs - beginner shuffle step", "This is a beginner jig step. The jig (or double jig) is another common type of dance tune. Like the reel, the tune usually consists of two parts made of eight bars, but the time signature is 6/8. This means that there are six beats to every bar (each beat is counted in groups of three as 1-2-3,4-5-6 with the emphasis on beats one and four). If you can say 'Humpty Dumpty' to the tune it is a jig. ", '<iframe width="560" height="315" src="https://www.youtube.com/embed/o4N0OpHyRxI" frameborder="0" allowfullscreen></iframe>', "Step shuffle down, toe step shuffle down, toe step shuffle down....", 1, 12 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 12 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 12 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 12 ],
+# Sean-nós Intermediate 13
+  ["Lesson 1", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 1, 13 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 13 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 13 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 13 ],
+# Sean-nós Advanced 14
+  ["Lesson 1", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 1, 14 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 14 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 14 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 14 ],
+# Musicians 15
+  ["Johnny Connolly", "Johnny Connolly, Inis Bearrachain, Connemara, Ireland. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", "<iframe width='560' height='315' src='https://www.youtube.com/embed/aC8vuMZTVMQ' frameborder='0' allowfullscreen></iframe>", "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", 1, 15 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 15 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 15 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 15 ],
 
-#Irish Sean-nós id 3
-
-# Sean-nós Steps Beginner 13
-  [ "Jigs - beginner shuffle step", "This is a beginner jig step. The jig (or double jig) is another common type of dance tune. Like the reel, the tune usually consists of two parts made of eight bars, but the time signature is 6/8. This means that there are six beats to every bar (each beat is counted in groups of three as 1-2-3,4-5-6 with the emphasis on beats one and four). If you can say 'Humpty Dumpty' to the tune it is a jig. ", '<iframe width="560" height="315" src="https://www.youtube.com/embed/o4N0OpHyRxI" frameborder="0" allowfullscreen></iframe>', "Step shuffle down, toe step shuffle down, toe step shuffle down....", 1, 13 ],
-# Sean-nós Intermediate 14
-
-# Sean-nós Advanced 15
-
-# Musicians 16
-  ["Johnny Connolly", "Johnny Connolly, Inis Bearrachain, Connemara, Ireland. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", "<iframe width='560' height='315' src='https://www.youtube.com/embed/aC8vuMZTVMQ' frameborder='0' allowfullscreen></iframe>", "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", 1, 16 ],
-
-# Dancers 17
-  ["Dancer: Seamus O Duibhán", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", '<iframe width="560" height="315" src="https://www.youtube.com/embed/_lzsj9NCgjc" frameborder="0" allowfullscreen></iframe>', "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", 2, 17 ],
-
-# History 18
-
-# Music 19
-
-
-
-
-
-
-
+# Dancers 16
+  ["Dancer: Seamus O Duibhán", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", '<iframe width="560" height="315" src="https://www.youtube.com/embed/_lzsj9NCgjc" frameborder="0" allowfullscreen></iframe>', "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", 1, 16 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 16 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 16 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 16 ],
+# History 17
+  ["Lesson 1", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 1, 17 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 17 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 17 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 17 ],
+# Music 18
+  ["Lesson 1", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 1, 18 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 18 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 18 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 18 ],
 #Percussive Choreography id 4
+# 19 brush dance 4 dancers
+  ["Lesson 1", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 1, 19 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 19 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 19 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 19 ],
 #Irish Brush Dance id 5
+# 20 history of brush dance
+  ["Lesson 1", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 1, 20 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 20 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 20 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 20 ],
 #History of Irish Dance id 6
-
+# 21 early years
+  ["Lesson 1", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 1, 21 ],
+  [ "Lesson 2", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 2, 21 ],
+  [ "Lesson 3", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 3, 21 ],
+  [ "Lesson 4", "TBA", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "https://en.wikipedia.org/wiki/Irish_set_dance", 4, 21 ],
 ]
 
 lesson_list.each do |name, content, video, callers_notes, number, section_id|
