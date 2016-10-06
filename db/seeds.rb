@@ -2,7 +2,7 @@
 course_list = [
   [ "Irish Set Dance", "Explore the most popular form of traditional social dancing in Ireland today. Sets are dance in square formation with intricate and rhythmic footwork. Learn to dance to reels, jigs, slides, polkas and hornpipes. This course is organized by county and will include the dance instructions, callers notes, battering steps and video." ],
   [ "Irish Ceili Dance", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" ],
-  [ "Irish Sean-nos Dance", "Sean-nós literally meaning old-style is a highly improvisational, low to the ground, rhythmic dance form. Unlike Irish step dancers, Sean-nós dancers swing their hips and use their arms as forms of expressing the music. Traditionally a dancer danced solo on the hardwood of a half door or the round top of a barrel; as a result the steps are confined to a small space. In Sean-nós dance, the dancer is tied closely with the musician and the music. The dancer interprets the music." ],
+  [ "Irish Sean-nós Dance", "Sean-nós literally meaning old-style is a highly improvisational, low to the ground, rhythmic dance form. Unlike Irish step dancers, Sean-nós dancers swing their hips and use their arms as forms of expressing the music. Traditionally a dancer danced solo on the hardwood of a half door or the round top of a barrel; as a result the steps are confined to a small space. In Sean-nós dance, the dancer is tied closely with the musician and the music. The dancer interprets the music." ],
   [ "Percussive Choreography", "This course will focus on improvisation, rhythmic footwork and performance techniques. It will draw from Cape Breton dance, Québécois, American Clogging, Sean-nós Dance, Irish Old Style Step dance, Waltz Clog and more." ],
   [ "Irish Brush Dance", "In this course we cover the basics of the traditional Irish brush dance. The brush dance is done with a brush or broom. There are many stories behind the brush dance. One story is that it was performed by the Travelers when they went from house to house selling items, including brushes(brooms). It is told that they would perform the dance and display the brush." ],
   [ "History of Irish Dance", "Explore the rich history of Irish dance. We will cover the history of Irish dance from the earliest records to the present. We will explore the individual dance genres: Céilí dance, Set Dance, Sean-nós dance, Old-style Traditional and Step Dance, as well as 'Riverdance'." ]
@@ -13,24 +13,24 @@ course_list.each do |name, description|
 end
 
 section_list = [
-  [ "Dances of Connemara", "Beginner", 1, 1 ],
-  [ "Battering Steps for Connemara Set", "Intermediate", 2, 1 ],
-  [ "Dances of Cork", "Beginner", 2, 1 ],
-  [ "Dances of Clare", "Beginner", 1, 1 ],
-  [ "Battering Steps for Clare Sets", "Intermediate", 2, 1 ],
-  [ "Dances of Kerry", "Beginner", 1, 1 ],
-  [ "Dances of Mayo", "Beginner", 1, 1 ],
-  [ "Dances of Limerick", "Beginner", 1, 1 ],
+  [ "Irish Set Dancing - Overview", "All levels", 1, 1],
+  [ "Dances of Connemara", "All levels", 1, 1 ],
+  [ "Dances of Cork", "All levels", 2, 1 ],
+  [ "Dances of Clare", "All levels", 1, 1 ],
+  [ "Dances of Kerry", "All levels", 1, 1 ],
+  [ "Dances of Mayo", "All levels", 1, 1 ],
+  [ "Dances of Limerick", "All levels", 1, 1 ],
   [ "Line Dances", "Beginner", 1, 2 ],
   [ "Circle Dances", "Beginner", 1, 2 ],
   [ "Four Hands", "Intermediate", 1, 2 ],
   [ "Eight Hands", "Advanced", 1, 2 ],
-  [ "Jigs", "Beginner", 1, 3 ],
-  [ "Jigs", "Intermediate", 1, 3 ],
-  [ "Jigs", "Advanced", 1, 3 ],
-  [ "Reels", "Beginner", 1, 3 ],
-  [ "Reels", "Intermediate", 1, 3 ],
-  [ "Reels", "Advanced", 1, 3 ],
+  [ "Sean-nós Steps", "Beginner", 1, 3 ],
+  [ "Sean-nós Steps", "Intermediate", 1, 3 ],
+  [ "Sean-nós Steps", "Advanced", 1, 3 ],
+  [ "Musicians", "All levels", 1, 3 ],
+  [ "Dancers", "All levels", 1, 3 ],
+  [ "History", "All levels", 1, 3 ],
+  [ "Music", "All levels", 1, 3 ],
   [ "Brush Dance - 4 dancers", "Advanced", 1, 4 ],
   [ "The History of the Brush Dance", "Intermediate", 1, 5 ],
   [ "Early Years", "Beginning", 1, 6 ],
@@ -41,8 +41,49 @@ section_list.each do |name, level, number, course_id|
 end
 
 lesson_list = [
-  ["Johnny Connolly", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", "<iframe width='560' height='315' src='https://www.youtube.com/embed/aC8vuMZTVMQ' frameborder='0' allowfullscreen></iframe>", "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", 1, 1 ],
-  [ "Jigs - beginner shuffle step", "This is a beginner jig step. The jig (or double jig) is another common type of dance tune. Like the reel, the tune usually consists of two parts made of eight bars, but the time signature is 6/8. This means that there are six beats to every bar (each beat is counted in groups of three as 1-2-3,4-5-6 with the emphasis on beats one and four). If you can say 'Humpty Dumpty' to the tune it is a jig. ", '<iframe width="560" height="315" src="https://www.youtube.com/embed/o4N0OpHyRxI" frameborder="0" allowfullscreen></iframe>', "Step shuffle down, toe step shuffle down, toe step shuffle down....", 1, 13 ]
+#Course: Irish Set Dance id 1
+# 1 Irish Set Dancing - Overview
+  [ "Irish Set Dancing - Early Years", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", '<iframe width="560" height="315" src="https://www.youtube.com/embed/TE1Dak_UiP4" frameborder="0" allowfullscreen></iframe>', "Resources: Wikipedia https://en.wikipedia.org/wiki/Irish_set_dance", 1, 1 ],
+# 2 Dances of Connemara
+# 3 Dances of Cork
+# 4 Dances of Clare
+# 5 Dances of Kerry
+# 6 Dances of Mayo
+# 7 Dances of Limerick
+
+#seciton: Connemara id 1
+#seciton:  id 1
+
+#Irish Ceili Dance id 2
+
+#Irish Sean-nós id 3
+
+# Sean-nós Steps Beginner 13
+  [ "Jigs - beginner shuffle step", "This is a beginner jig step. The jig (or double jig) is another common type of dance tune. Like the reel, the tune usually consists of two parts made of eight bars, but the time signature is 6/8. This means that there are six beats to every bar (each beat is counted in groups of three as 1-2-3,4-5-6 with the emphasis on beats one and four). If you can say 'Humpty Dumpty' to the tune it is a jig. ", '<iframe width="560" height="315" src="https://www.youtube.com/embed/o4N0OpHyRxI" frameborder="0" allowfullscreen></iframe>', "Step shuffle down, toe step shuffle down, toe step shuffle down....", 1, 13 ],
+# Sean-nós Intermediate 14
+
+# Sean-nós Advanced 15
+
+# Musicians 16
+  ["Johnny Connolly", "Johnny Connolly, Inis Bearrachain, Connemara, Ireland. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", "<iframe width='560' height='315' src='https://www.youtube.com/embed/aC8vuMZTVMQ' frameborder='0' allowfullscreen></iframe>", "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", 1, 16 ],
+
+# Dancers 17
+  ["Dancer: Seamus O Duibhán", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", '<iframe width="560" height="315" src="https://www.youtube.com/embed/_lzsj9NCgjc" frameborder="0" allowfullscreen></iframe>', "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", 2, 17 ],
+
+# History 18
+
+# Music 19
+
+
+
+
+
+
+
+#Percussive Choreography id 4
+#Irish Brush Dance id 5
+#History of Irish Dance id 6
+
 ]
 
 lesson_list.each do |name, content, video, callers_notes, number, section_id|

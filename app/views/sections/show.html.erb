@@ -12,14 +12,11 @@
   <div class="row">
     <div class="col-sm-8"><h4><%= link_to lesson.name, section_lesson_path(@section, lesson) %></h4></div>
     <div class="col-sm-2"><h4 class="tune"><%= link_to "Edit",  edit_section_lesson_path(@section, lesson) %></h4></div>
-    <div class="col-sm-2"> <h4 class="bars">        <%= link_to "Delete", section_lesson_path(@section, lesson),
+    <div class="col-sm-2"> <h4 class="bars"><%= link_to "Delete", section_lesson_path(@section, lesson),
                                      :data => {:confirm => "Are you sure?",
                                                     :method => "delete"} %></h4></div>
-
-
-    <% end %>
-  </ul>
-<% else %>
+  </div>
+  <% end %>
+  <% else %>
   <p>There are no lessons yet!</p>
 <% end %>
-  </div>

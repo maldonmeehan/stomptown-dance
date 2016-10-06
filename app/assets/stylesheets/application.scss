@@ -3,6 +3,15 @@
 // @import "font-awesome-sprockets";
 // @import "font-awesome";
 
+// HEX: #d5f4e6
+// HEX: #80ced6
+// HEX: #fefbd8
+// HEX: #618685
+
+// body {
+//   background-color: #fefbd8;
+// }
+
 ul {
   list-style: none;
 }
@@ -37,11 +46,13 @@ li {
     line-height: 1;
     margin-bottom: 0;
     text-align: center;
+    color: #618685;
 }
 
 .hero-unit h2 {
     font-size: 25px;
     text-align: center;
+    color: #618685;
 }
 
 .fill{width:100%;height:350px;background-position:center;background-size:cover;
@@ -50,3 +61,10 @@ li {
 .main-container {
   margin-bottom: 60px;
 }
+
+// .btn-primary {
+//   background-color: #80ced6;
+// }
+// .btn-primary:hover {
+//   background-color: #d5f4e6;
+// }
