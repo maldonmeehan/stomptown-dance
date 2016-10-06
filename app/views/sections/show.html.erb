@@ -6,19 +6,20 @@
 <%= link_to "Delete Section", section_path(@section), class: "btn btn-danger",
                         :data => {:confirm => "Are you sure?",
                                        :method => "delete"} %>
-<% if @section.lessons.any? %>
-  <ul>
-    <% @section.lessons.each do |lesson| %>
-      <li>
-        <%= link_to lesson.name, section_lesson_path(@section, lesson) %>
 
-        <%= link_to "Edit",  edit_section_lesson_path(@section, lesson) %> |
-        <%= link_to "Delete", section_lesson_path(@section, lesson),
-                                 :data => {:confirm => "Are you sure?",
-                                                :method => "delete"} %>
-      </li>
+<% if @section.lessons.any? %>
+  <% @section.lessons.each do |lesson| %>
+  <div class="row">
+    <div class="col-sm-8"><h4><%= link_to lesson.name, section_lesson_path(@section, lesson) %></h4></div>
+    <div class="col-sm-2"><h4 class="tune"><%= link_to "Edit",  edit_section_lesson_path(@section, lesson) %></h4></div>
+    <div class="col-sm-2"> <h4 class="bars">        <%= link_to "Delete", section_lesson_path(@section, lesson),
+                                     :data => {:confirm => "Are you sure?",
+                                                    :method => "delete"} %></h4></div>
+
+
     <% end %>
   </ul>
 <% else %>
   <p>There are no lessons yet!</p>
 <% end %>
+  </div>
