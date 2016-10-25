@@ -3,6 +3,7 @@ class CoursesController < ApplicationController
 
   def index
     @courses = Course.all
+    @course = Course.new
   end
 
   def show
@@ -22,17 +23,35 @@ class CoursesController < ApplicationController
   end
 
   def create
-    @course = Course.new(course_params)
+  @course = Course.new(course_params)
+
+  respond_to do |format|
     if @course.save
-      flash[:notice] = "Course successfully added!"
-      respond_to do |format|
-        format.html { redirect_to courses_path }
-        format.js
-      end
+      format.html { redirect_to @course, notice: 'Course was successfully created.' }
+      format.json { render action: 'show', status: :created, location: @course }
+      # added:
+      format.js   { render action: 'show', status: :created, location: @course }
     else
-      render :new
+      format.html { render action: 'new' }
+      format.json { render json: @course.errors, status: :unprocessable_entity }
+      # added:
+      format.js   { render json: @course.errors, status: :unprocessable_entity }
     end
   end
+end
+
+  # def create
+  #   @course = Course.new(course_params)
+  #   if @course.save
+  #     flash[:notice] = "Course successfully added!"
+  #     respond_to do |format|
+  #       format.html { redirect_to courses_path }
+  #       format.js
+  #     end
+  #   else
+  #     render :new
+  #   end
+  # end
 
   def update
     @course= Course.find(params[:id])

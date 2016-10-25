@@ -1,4 +1,4 @@
-<%= render "layouts/errors", :object => @course %>
+<!-- <%= render "layouts/errors", :object => @course %>
 
 <%= form_for @course do |f| %>
   <%= f.label :name %>
@@ -7,4 +7,43 @@
   <%= f.text_area :description, size: "24x20", class: "form-control" %>
   <br>
   <%= f.submit class: "btn btn-primary" %>
+<% end %>
+ -->
+
+<%# Conditionally set remote: true. Also, passing model name as data attribute %>
+<% modal ||= false %>
+<% remote = modal ? true : false %>
+<%= form_for(@course, remote: remote, html: {role: :form, 'data-model' => 'course'}) do |f| %>
+
+  <% if @course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+      <% @course.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%# Added Bootstrap classes, and help-block container for error messages %>
+  <div class="form-group">
+    <%= f.label :name, class: 'control-label' %><br>
+    <%= f.text_field :name, class: 'form-control' %>
+    <span class="help-block"></span>
+  </div>
+
+  <%# Added Bootstrap classes, and help-block container for error messages %>
+  <div class="form-group">
+    <%= f.label :description, class: 'control-label' %><br>
+    <%= f.text_field :description, class: 'form-control' %>
+    <span class="help-block"></span>
+  </div>
+
+  <%# Added Bootstrap classes %>
+  <div class="actions">
+    <%= f.submit 'Submit', class: 'btn btn-default' %>
+  </div>
+
 <% end %>
