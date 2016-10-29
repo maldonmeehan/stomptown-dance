@@ -1,6 +1,8 @@
 <% provide(:title, "Courses | Stomptown Dance Lessons") %>
 
-<%= link_to "New Course", new_course_path, id: "new_course_js", class: "btn btn-primary", remote: true %>
+<% if current_user.admin? %>
+  <%= link_to "New Course", new_course_path, id: "new_course_js", class: "btn btn-primary", remote: true %>
+<% end %>
 
 <%= link_to "New Dance", new_dance_path, id: "new_dance_js", class: "btn btn-primary", remote: true %>
 
@@ -21,49 +23,3 @@
     </div>
   <% end %>
 </div>
-
-
-<!-- <h1>Listing people</h1>
-
-<table class='table' id='course_table'>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @courses.each do |course| %>
-      <%# Render table row partial for each course object %>
-      <%= render partial: 'table_row', locals: {course: course} %>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%# Added Bootstrap data modal attribute %>
-<%= link_to 'New Course', '#new_course_modal', 'data-toggle' => 'modal' %>
-
-<%# Bootstrap modal markup. @see: http://getbootstrap.com/javascript/#modals %>
-<div class="modal fade" id="new_course_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Create new course</h4>
-      </div>
-      <div class="modal-body">
-        <%# Render the new course form (passing modal => true to enable remote => true) %>
-        <%= render 'form', modal: true %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div> -->
