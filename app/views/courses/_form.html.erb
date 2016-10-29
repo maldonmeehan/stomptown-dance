@@ -11,7 +11,7 @@
  -->
 
 <%# Conditionally set remote: true. Also, passing model name as data attribute %>
-<% modal ||= false %>
+<!-- <% modal ||= false %>
 <% remote = modal ? true : false %>
 <%= form_for(@course, remote: remote, html: {role: :form, 'data-model' => 'course'}) do |f| %>
 
@@ -46,4 +46,4 @@
     <%= f.submit 'Submit', class: 'btn btn-default' %>
   </div>
 
-<% end %>
+<% end %> -->
