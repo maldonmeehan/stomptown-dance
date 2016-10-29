@@ -15,4 +15,6 @@
 </div>
 
 <hr>
-<%= link_to "New Dance", new_dance_path, class: "btn btn-primary", id: "new_dance_js", remote: true  %>
+<% if current_user.admin? %>
+  <%= link_to "New Dance", new_dance_path, class: "btn btn-primary", id: "new_dance_js", remote: true  %>
+<% end %>
