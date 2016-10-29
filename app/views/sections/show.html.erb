@@ -2,19 +2,22 @@
 
 <h1><%= @section.name %></h1>
 
+<% if current_user.admin? %>
 <%= link_to "Add a Lesson", new_section_lesson_path(@section), class: "btn btn-primary" %>
 <%= link_to "Delete Section", section_path(@section), class: "btn btn-danger",
                         :data => {:confirm => "Are you sure?",
                                        :method => "delete"} %>
-
+<% end %>
 <% if @section.lessons.any? %>
   <% @section.lessons.each do |lesson| %>
   <div class="row">
     <div class="col-sm-8"><h4><%= link_to lesson.name, section_lesson_path(@section, lesson) %></h4></div>
+    <% if current_user.admin? %>
     <div class="col-sm-2"><h4 class="tune"><%= link_to "Edit",  edit_section_lesson_path(@section, lesson) %></h4></div>
     <div class="col-sm-2"> <h4 class="bars"><%= link_to "Delete", section_lesson_path(@section, lesson),
                                      :data => {:confirm => "Are you sure?",
                                                     :method => "delete"} %></h4></div>
+    <% end %>
   </div>
   <% end %>
   <% else %>

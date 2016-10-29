@@ -1,11 +1,5 @@
 <% provide(:title, "Courses | Stomptown Dance Lessons") %>
 
-<% if current_user.admin? %>
-  <%= link_to "New Course", new_course_path, id: "new_course_js", class: "btn btn-primary", remote: true %>
-<% end %>
-
-<%= link_to "New Dance", new_dance_path, id: "new_dance_js", class: "btn btn-primary", remote: true %>
-
 <div class="hero-unit">
   <h1>Stomptown Dance Lessons!</h1>
   <h2>A dance learning platform</h2>
@@ -23,3 +17,11 @@
     </div>
   <% end %>
 </div>
+
+<% if current_user.admin? %>
+  <%= link_to "New Course", new_course_path, id: "new_course_js", class: "btn btn-primary", remote: true %>
+<% end %>
+
+<% if current_user.admin? %>
+  <%= link_to "New Dance", new_dance_path, id: "new_dance_js", class: "btn btn-primary", remote: true %>
+<% end %>
